@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28D2740157F001EC42C /* ByngoApp.swift */; };
+		69ABC2902740157F001EC42C /* CoreDataTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */; };
+		69ABC29227401584001EC42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69ABC29127401584001EC42C /* Assets.xcassets */; };
+		69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69ABC29427401584001EC42C /* Preview Assets.xcassets */; };
+		69ABC29727401584001EC42C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC29627401584001EC42C /* Persistence.swift */; };
+		69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC29827401584001EC42C /* Byngo.xcdatamodeld */; };
+		69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A0274019B4001EC42C /* ContentView.swift */; };
+		69ABC2A9274019B4001EC42C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A1274019B4001EC42C /* SettingsView.swift */; };
+		69ABC2AA274019B4001EC42C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A2274019B4001EC42C /* HistoryView.swift */; };
+		69ABC2AC274019B4001EC42C /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A4274019B4001EC42C /* ViewRouter.swift */; };
+		69ABC2AD274019B4001EC42C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A5274019B4001EC42C /* UserView.swift */; };
+		69ABC2AE274019B4001EC42C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A6274019B4001EC42C /* CategoryView.swift */; };
+		69ABC2AF274019B4001EC42C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A7274019B4001EC42C /* HomeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		69ABC28A2740157F001EC42C /* Byngo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Byngo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69ABC28D2740157F001EC42C /* ByngoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByngoApp.swift; sourceTree = "<group>"; };
+		69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTemplate.swift; sourceTree = "<group>"; };
+		69ABC29127401584001EC42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69ABC29427401584001EC42C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		69ABC29627401584001EC42C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		69ABC29927401584001EC42C /* Byngo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Byngo.xcdatamodel; sourceTree = "<group>"; };
+		69ABC2A0274019B4001EC42C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Byngo/ContentView.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2A1274019B4001EC42C /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Byngo/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2A2274019B4001EC42C /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryView.swift; path = Byngo/HistoryView.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2A4274019B4001EC42C /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewRouter.swift; path = Byngo/ViewRouter.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2A5274019B4001EC42C /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserView.swift; path = Byngo/UserView.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2A6274019B4001EC42C /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryView.swift; path = Byngo/CategoryView.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2A7274019B4001EC42C /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Byngo/HomeView.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69ABC2872740157F001EC42C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69ABC2812740157F001EC42C = {
+			isa = PBXGroup;
+			children = (
+				69ABC28C2740157F001EC42C /* Byngo */,
+				69ABC28B2740157F001EC42C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69ABC28B2740157F001EC42C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69ABC28A2740157F001EC42C /* Byngo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69ABC28C2740157F001EC42C /* Byngo */ = {
+			isa = PBXGroup;
+			children = (
+				69ABC28D2740157F001EC42C /* ByngoApp.swift */,
+				69ABC29127401584001EC42C /* Assets.xcassets */,
+				69ABC2A0274019B4001EC42C /* ContentView.swift */,
+				69ABC2A5274019B4001EC42C /* UserView.swift */,
+				69ABC2A4274019B4001EC42C /* ViewRouter.swift */,
+				69ABC2A6274019B4001EC42C /* CategoryView.swift */,
+				69ABC2A2274019B4001EC42C /* HistoryView.swift */,
+				69ABC2A7274019B4001EC42C /* HomeView.swift */,
+				69ABC2A1274019B4001EC42C /* SettingsView.swift */,
+				69ABC29627401584001EC42C /* Persistence.swift */,
+				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
+				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
+				69ABC29327401584001EC42C /* Preview Content */,
+			);
+			path = Byngo;
+			sourceTree = "<group>";
+		};
+		69ABC29327401584001EC42C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				69ABC29427401584001EC42C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69ABC2892740157F001EC42C /* Byngo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69ABC29D27401584001EC42C /* Build configuration list for PBXNativeTarget "Byngo" */;
+			buildPhases = (
+				69ABC2862740157F001EC42C /* Sources */,
+				69ABC2872740157F001EC42C /* Frameworks */,
+				69ABC2882740157F001EC42C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Byngo;
+			productName = Byngo;
+			productReference = 69ABC28A2740157F001EC42C /* Byngo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69ABC2822740157F001EC42C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					69ABC2892740157F001EC42C = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 69ABC2852740157F001EC42C /* Build configuration list for PBXProject "Byngo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69ABC2812740157F001EC42C;
+			productRefGroup = 69ABC28B2740157F001EC42C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69ABC2892740157F001EC42C /* Byngo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69ABC2882740157F001EC42C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */,
+				69ABC29227401584001EC42C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69ABC2862740157F001EC42C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69ABC2AC274019B4001EC42C /* ViewRouter.swift in Sources */,
+				69ABC2AA274019B4001EC42C /* HistoryView.swift in Sources */,
+				69ABC29727401584001EC42C /* Persistence.swift in Sources */,
+				69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */,
+				69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */,
+				69ABC2AE274019B4001EC42C /* CategoryView.swift in Sources */,
+				69ABC2A9274019B4001EC42C /* SettingsView.swift in Sources */,
+				69ABC2902740157F001EC42C /* CoreDataTemplate.swift in Sources */,
+				69ABC2AD274019B4001EC42C /* UserView.swift in Sources */,
+				69ABC2AF274019B4001EC42C /* HomeView.swift in Sources */,
+				69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		69ABC29B27401584001EC42C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69ABC29C27401584001EC42C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69ABC29E27401584001EC42C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEEE.Byngo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69ABC29F27401584001EC42C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HKUEEE.Byngo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69ABC2852740157F001EC42C /* Build configuration list for PBXProject "Byngo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69ABC29B27401584001EC42C /* Debug */,
+				69ABC29C27401584001EC42C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69ABC29D27401584001EC42C /* Build configuration list for PBXNativeTarget "Byngo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69ABC29E27401584001EC42C /* Debug */,
+				69ABC29F27401584001EC42C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		69ABC29827401584001EC42C /* Byngo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				69ABC29927401584001EC42C /* Byngo.xcdatamodel */,
+			);
+			currentVersion = 69ABC29927401584001EC42C /* Byngo.xcdatamodel */;
+			path = Byngo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 69ABC2822740157F001EC42C /* Project object */;
+}
