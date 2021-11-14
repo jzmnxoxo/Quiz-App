@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SettingsView: View {
+    @ObservedObject var defaults = Defaults()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Form {
+                Section(header: Text("Profile")) {
+                    TextField("Username", text: $defaults.username)
+                }
+            }
+            .navigationBarTitle("Settings")
+        }
     }
 }
 

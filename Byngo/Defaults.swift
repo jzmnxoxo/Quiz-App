@@ -6,7 +6,17 @@
 //
 
 import SwiftUI
+import Combine
 
-class UserSettings: ObservableObject {
-    @Published var
+let defaults = UserDefaults.standard
+class Defaults: ObservableObject {
+    @Published var username: String {
+        didSet {
+            defaults.set(username, forKey: "username")
+        }
+    }
+    
+    init(){
+        self.username = defaults.object(forKey: "username") as? String ?? "user"
+    }
 }

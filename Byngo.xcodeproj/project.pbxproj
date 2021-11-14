@@ -85,8 +85,8 @@
 				69ABC2A1274019B4001EC42C /* SettingsView.swift */,
 				69ABC29627401584001EC42C /* Persistence.swift */,
 				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
-				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
 				69ABC2B62740F27B001EC42C /* Defaults.swift */,
+				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
 				69ABC29327401584001EC42C /* Preview Content */,
 			);
 			path = Byngo;
