@@ -22,7 +22,7 @@ struct ContentView: View {
                 case .user:
                     UserView()
                 case .category:
-                    Text("Categories")
+                    CategoryList()
                 case .history:
                     Text("History")
                 case .settings:
