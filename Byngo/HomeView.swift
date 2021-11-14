@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var defaults = Defaults()
+    @ObservedObject var userSettings = UserSettings()
     //let username = $userSettings.string("username")
     
     var body: some View {
         VStack{
             HStack(spacing: 17.0){
-                Text("Hi "+defaults.username+"!")
+                Text("Hi "+userSettings.username+"!")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
@@ -43,9 +43,9 @@ struct Avatar: View{
     var body: some View{
         Image("avatar3")
             .resizable()
-            .frame(width: 130, height: 130)
+            .frame(width: 120, height: 120)
             .shadow(radius: 5)
-            .offset(y: -50)
+            .offset(y: -30)
         
 
             
