@@ -48,7 +48,7 @@ struct ContentView: View {
                         viewRouter.currentPage = .home
                     }
                     .offset(y: -geometry.size.height/8/3)
-//                    TabBarIcon(width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "plus", tabName: "Add")
+
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .history, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "clock.arrow.circlepath", tabName: "History")
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .settings,width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "gearshape", tabName: "Settings")
                     

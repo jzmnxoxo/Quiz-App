@@ -16,6 +16,7 @@ struct UserView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 HStack {
                     Spacer()
                     Image("avatar3")
@@ -43,14 +44,16 @@ struct UserView: View {
                         }
                     }
                     //                        TextField("Password", text: $userSettings.password)
-                    NavigationLink(destination: StatView()){
+                    NavigationLink(destination: StatsView(statRouter: StatRouter())){
                         Text("Statistics")
                     }
+                    
                 }
             }
+            .navigationTitle("Account")
 
         }
-        .navigationBarTitle("Account")
+        
 
     }
 
