@@ -20,7 +20,7 @@ struct ContentView: View {
                 case .home:
                     HomeView()
                 case .user:
-                    Text("User")
+                    UserView()
                 case .category:
                     Text("Categories")
                 case .history:

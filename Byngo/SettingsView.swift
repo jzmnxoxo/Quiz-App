@@ -14,9 +14,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Username")) {
-                    TextField("Username", text: $userSettings.username)
-                }
+                
                 Section(header: Text("Sounds")) {
                     Toggle(isOn: $userSettings.music){
                         Text("Music")
@@ -37,10 +35,11 @@ struct SettingsView: View {
                         }
                     }
                 }
-            }
+                }
+                .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("Settings")
         }
-        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

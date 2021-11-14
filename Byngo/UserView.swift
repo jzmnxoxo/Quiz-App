@@ -6,10 +6,34 @@
 //
 
 import SwiftUI
+import Combine
 
 struct UserView: View {
+    
+    @ObservedObject var userSettings = UserSettings()
+
     var body: some View {
-        Text("USER!")
+        NavigationView{
+            VStack{
+                HStack{
+                    Spacer()
+                    Image("avatar3")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .shadow(radius: 5)
+                    Spacer()
+                }
+                Form{
+                    Section(header: Text("Username")) {
+                        TextField("Royal Educated Octopus", text: $userSettings.username)
+                    }
+                }
+            }
+            .navigationBarTitle("Account")
+            
+        }
+        
+        
     }
 }
 
