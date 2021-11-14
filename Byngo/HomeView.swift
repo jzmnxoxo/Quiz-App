@@ -11,16 +11,18 @@ struct HomeView: View {
     
     var body: some View {
         VStack{
-            HStack{
+            HStack(spacing: 17.0){
                 Text("Hi user!")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
                     .padding([.top, .leading])
+                //Spacer()
+                Avatar()
                 Spacer()
             }
-            Avatar()
-            Spacer()
+            
+            
             Text("HOMEPAGE")
             Spacer()
             
@@ -37,10 +39,11 @@ struct HomeView_Previews: PreviewProvider {
 
 struct Avatar: View{
     var body: some View{
-        Image("avatar2")
+        Image("avatar3")
             .resizable()
-            .frame(width: 60, height: 60)
-            .offset(y: -30)
+            .frame(width: 100, height: 100)
+            .shadow(radius: 5)
+            //.offset(y: -65)
         
 
             

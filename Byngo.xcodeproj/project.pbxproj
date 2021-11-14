@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28D2740157F001EC42C /* ByngoApp.swift */; };
 		69ABC2902740157F001EC42C /* CoreDataTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */; };
-		69ABC29227401584001EC42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69ABC29127401584001EC42C /* Assets.xcassets */; };
 		69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69ABC29427401584001EC42C /* Preview Assets.xcassets */; };
 		69ABC29727401584001EC42C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC29627401584001EC42C /* Persistence.swift */; };
 		69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC29827401584001EC42C /* Byngo.xcdatamodeld */; };
@@ -20,13 +19,15 @@
 		69ABC2AD274019B4001EC42C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A5274019B4001EC42C /* UserView.swift */; };
 		69ABC2AE274019B4001EC42C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A6274019B4001EC42C /* CategoryView.swift */; };
 		69ABC2AF274019B4001EC42C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A7274019B4001EC42C /* HomeView.swift */; };
+		69ABC2B12740273A001EC42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69ABC2B02740273A001EC42C /* Assets.xcassets */; };
+		69ABC2B3274030F2001EC42C /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2B2274030F2001EC42C /* Option.swift */; };
+		69ABC2B72740F27B001EC42C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2B62740F27B001EC42C /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69ABC28A2740157F001EC42C /* Byngo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Byngo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69ABC28D2740157F001EC42C /* ByngoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByngoApp.swift; sourceTree = "<group>"; };
 		69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTemplate.swift; sourceTree = "<group>"; };
-		69ABC29127401584001EC42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69ABC29427401584001EC42C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		69ABC29627401584001EC42C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		69ABC29927401584001EC42C /* Byngo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Byngo.xcdatamodel; sourceTree = "<group>"; };
@@ -37,6 +38,9 @@
 		69ABC2A5274019B4001EC42C /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserView.swift; path = Byngo/UserView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A6274019B4001EC42C /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryView.swift; path = Byngo/CategoryView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A7274019B4001EC42C /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Byngo/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2B02740273A001EC42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Byngo/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		69ABC2B2274030F2001EC42C /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		69ABC2B62740F27B001EC42C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +73,20 @@
 		69ABC28C2740157F001EC42C /* Byngo */ = {
 			isa = PBXGroup;
 			children = (
+				69ABC2B02740273A001EC42C /* Assets.xcassets */,
 				69ABC28D2740157F001EC42C /* ByngoApp.swift */,
-				69ABC29127401584001EC42C /* Assets.xcassets */,
 				69ABC2A0274019B4001EC42C /* ContentView.swift */,
 				69ABC2A5274019B4001EC42C /* UserView.swift */,
 				69ABC2A4274019B4001EC42C /* ViewRouter.swift */,
 				69ABC2A6274019B4001EC42C /* CategoryView.swift */,
 				69ABC2A2274019B4001EC42C /* HistoryView.swift */,
 				69ABC2A7274019B4001EC42C /* HomeView.swift */,
+				69ABC2B2274030F2001EC42C /* Option.swift */,
 				69ABC2A1274019B4001EC42C /* SettingsView.swift */,
 				69ABC29627401584001EC42C /* Persistence.swift */,
 				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
 				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
+				69ABC2B62740F27B001EC42C /* Defaults.swift */,
 				69ABC29327401584001EC42C /* Preview Content */,
 			);
 			path = Byngo;
@@ -152,8 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69ABC2B12740273A001EC42C /* Assets.xcassets in Resources */,
 				69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */,
-				69ABC29227401584001EC42C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,9 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				69ABC2AC274019B4001EC42C /* ViewRouter.swift in Sources */,
+				69ABC2B72740F27B001EC42C /* Defaults.swift in Sources */,
 				69ABC2AA274019B4001EC42C /* HistoryView.swift in Sources */,
 				69ABC29727401584001EC42C /* Persistence.swift in Sources */,
 				69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */,
+				69ABC2B3274030F2001EC42C /* Option.swift in Sources */,
 				69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */,
 				69ABC2AE274019B4001EC42C /* CategoryView.swift in Sources */,
 				69ABC2A9274019B4001EC42C /* SettingsView.swift in Sources */,
