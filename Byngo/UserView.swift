@@ -8,19 +8,15 @@
 import SwiftUI
 import Combine
 
-
-
 struct UserView: View {
-    
+
     @ObservedObject var userSettings = UserSettings()
-    @State private var isSecured: Bool = true
-    //@Observable
-    private var title: String
-    
+    @State private var isHidden: Bool = true
+
     var body: some View {
-        NavigationView{
-            VStack{
-                HStack{
+        NavigationView {
+            VStack {
+                HStack {
                     Spacer()
                     Image("avatar3")
                         .resizable()
@@ -28,36 +24,38 @@ struct UserView: View {
                         .shadow(radius: 5)
                     Spacer()
                 }
-                Form{
+                Form {
                     Section(header: Text("Username")) {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
+
                         ZStack(alignment: .trailing) {
-                            if isSecured {
-                                SecureField(title, text: $userSettings.password)
+                            if isHidden {
+                                SecureField("Password", text: $userSettings.password)
                             } else {
-                                TextField(title, text: $userSettings.password)
+                                TextField("Password", text: $userSettings.password)
                             }
                             Button(action: {
-                                isSecured.toggle()
+                                isHidden.toggle()
                             }) {
-                                Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                                Image(systemName: isHidden ? "eye.slash" : "eye")
                                     .accentColor(.gray)
                             }
                         }
                     }
                     //                        TextField("Password", text: $userSettings.password)
-                    
+                    NavigationLink(destination: StatView()){
+                        Text("Statistics")
+                    }
                 }
             }
-            
+
         }
         .navigationBarTitle("Account")
-        
-    }
-    
-    
-}
 
+    }
+
+
+}
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
