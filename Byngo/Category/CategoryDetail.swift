@@ -15,7 +15,6 @@ struct CategoryDetail: View {
     @State var category: Category
     
     @State var selectedDifficulty: Int = 1
-    @State var startedQuiz: Bool = false
     
     var categoryIndex: Int {
         categoryData.categories.firstIndex(where: {$0.id==category.id}) ?? 0
@@ -23,21 +22,20 @@ struct CategoryDetail: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0.0) {
-//            ZStack {
-//
-//                Rectangle()
-//                    .frame(width: 350, height: 70)
-//                    .foregroundColor(.gray)
-//                    .cornerRadius(10)
-//                Button("BEGINNER") {
-//                    selectedDifficulty = 1
-//                    startedQuiz = true
-//                }
-//            }
+            
+            Text(category.title)
+                .font(.largeTitle)
+                .bold()
+            
+           
+            Rectangle()
+                .frame(width: 350, height: 50)
+                .foregroundColor(.clear)
+            
             //beginner
             Button( action: {
                 selectedDifficulty = 1
-                startedQuiz = true
+                ConfirmQuizView(category: categoryData.categories[categoryIndex], selectedDifficulty: 1)
             }) {
                 ZStack {
                     Rectangle()
@@ -54,11 +52,14 @@ struct CategoryDetail: View {
                 }
             }
             
+            Rectangle()
+                .frame(width: 350, height: 30)
+                .foregroundColor(.clear)
             
             //intermediate
             Button( action: {
                 selectedDifficulty = 2
-                startedQuiz = true
+                ConfirmQuizView(category: categoryData.categories[categoryIndex], selectedDifficulty: 2)
             }) {
                 ZStack {
                     Rectangle()
@@ -75,11 +76,14 @@ struct CategoryDetail: View {
                 }
             }
             
+            Rectangle()
+                .frame(width: 350, height: 30)
+                .foregroundColor(.clear)
             
             //advanced
             Button( action: {
                 selectedDifficulty = 3
-                startedQuiz = true
+                ConfirmQuizView(category: categoryData.categories[categoryIndex], selectedDifficulty: 3)
             }) {
                 ZStack {
                     Rectangle()
@@ -96,14 +100,14 @@ struct CategoryDetail: View {
                 }
             }
             
-            
-            
+            Spacer()
             
             
 //            TextField("Title", text: $categoryData.categories[categoryIndex].title)
 //            TextField("Desc", text: $categoryData.categories[categoryIndex].desc)
         }
         .padding()
+        
     }
 }
 

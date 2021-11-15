@@ -15,9 +15,9 @@ class ModelDataCat: ObservableObject {
         let df = DateFormatter()
         df.dateFormat="d-MMM-yyyy"
 
-        categories.append(Category(id:0, title:"Biology", desc:""))
-        categories.append(Category(id:1, title:"Programming", desc:""))
-        categories.append(Category(id:2, title:"Math", desc:""))
+        categories.append(Category(id:0, title:"Biology"))
+        categories.append(Category(id:1, title:"Programming"))
+        categories.append(Category(id:2, title:"Math"))
 
     }
 }

@@ -15,10 +15,6 @@ struct CategoryRow: View {
             Text(category.title)
                 .font(.headline)
             
-            Text(category.desc)
-                .font(.body)
-                .foregroundColor(Color.gray)
-            
             
             
         }
