@@ -6,11 +6,58 @@
 //
 
 import SwiftUI
+import Combine
 
 struct UserView: View {
+
+    @ObservedObject var userSettings = UserSettings()
+    @State private var isHidden: Bool = true
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Image("avatar3")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .shadow(radius: 5)
+                    Spacer()
+                }
+                Form {
+                    Section(header: Text("Username")) {
+                        TextField("Royal Educated Octopus", text: $userSettings.username)
+
+                        ZStack(alignment: .trailing) {
+                            if isHidden {
+                                SecureField("Password", text: $userSettings.password)
+                            } else {
+                                TextField("Password", text: $userSettings.password)
+                            }
+                            Button(action: {
+                                isHidden.toggle()
+                            }) {
+                                Image(systemName: isHidden ? "eye.slash" : "eye")
+                                    .accentColor(.gray)
+                            }
+                        }
+                    }
+                    //                        TextField("Password", text: $userSettings.password)
+                    NavigationLink(destination: StatsView(statRouter: StatRouter())){
+                        Text("Statistics")
+                    }
+                    
+                }
+            }
+            .navigationTitle("Account")
+
+        }
+        
+
     }
+
+
 }
 
 struct UserView_Previews: PreviewProvider {
