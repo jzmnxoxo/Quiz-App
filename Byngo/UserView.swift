@@ -11,6 +11,7 @@ import Combine
 struct UserView: View {
 
     @ObservedObject var userSettings = UserSettings()
+    @EnvironmentObject var viewModel: AppViewModel
     @State private var isHidden: Bool = true
 
     var body: some View {
@@ -49,6 +50,15 @@ struct UserView: View {
                     }
                     
                 }
+                
+                Button(action: {
+                    viewModel.logout()
+                }, label: {
+                    Text("Log out")
+                        .frame(width: 200, height: 50)
+                        
+                    
+                })
             }
             .navigationTitle("Account")
 

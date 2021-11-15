@@ -24,7 +24,7 @@ struct ContentView: View {
                 case .category:
                     CategoryList()
                 case .history:
-                    Text("History")
+                    HistoryView()
                 case .settings:
                     SettingsView()
                 }
@@ -94,6 +94,7 @@ struct TabBarIcon: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(viewRouter: ViewRouter())
+            .preferredColorScheme(.dark)
     }
 }
 

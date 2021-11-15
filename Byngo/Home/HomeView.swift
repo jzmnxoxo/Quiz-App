@@ -16,27 +16,33 @@ struct HomeView: View {
         
         GeometryReader{ geometry in
             VStack{
-                HStack(spacing: 17.0){
-                    Text("Hi "+userSettings.username+"!")
-                        .font(.largeTitle)
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.leading)
-                        .padding([.top, .leading])
-                    //Spacer()
-                   
-                    Spacer()
-                }
+//                HStack(spacing: 17.0){
+//                    Text("Hi "+userSettings.username+"!")
+//                        .font(.largeTitle)
+//                        .fontWeight(.semibold)
+//                        .multilineTextAlignment(.leading)
+//                        .padding([.top, .leading])
+//                    //Spacer()
+//
+//                    Spacer()
+//                }
                 
                 Avatar()
                 
-                NavigationView {
+                Text("Special Picks")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.leading)
+//                NavigationView {
                     List(homeData.homes) {home in
                         NavigationLink(destination: HomeDetail(home: home)) {
                             HomeRow(home: home)
                         }
                     }
-                    .navigationTitle("Special Pick")
-                }
+                    .navigationTitle("Hi "+userSettings.username+"!")
+                
+                    //.navigationBarTitle("Special Pick")
+//                }
                  
             }
             .edgesIgnoringSafeArea(.bottom)

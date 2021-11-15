@@ -18,6 +18,12 @@ class UserSettings: ObservableObject {
         }
     }
     
+    @Published var email: String {
+        didSet {
+            UserDefaults.standard.set(email, forKey: "email")
+        }
+    }
+    
     @Published var password: String {
         didSet {
             UserDefaults.standard.set(password, forKey: "password")
@@ -55,7 +61,7 @@ class UserSettings: ObservableObject {
     }
     
     static var langs = ["English", "Chinese", "Spanish","Japanese"]
-    static var ids = [123456, 543523, 984752, 234213]
+    //static var ids = [123456, 543523, 984752, 234213]
     static var regions = ["Hong Kong", "Taiwan", "United States", "Japan"]
     
     init(){
@@ -65,6 +71,7 @@ class UserSettings: ObservableObject {
         self.password = UserDefaults.standard.object(forKey: "password") as? String ?? ""
         self.language = UserDefaults.standard.object(forKey: "language") as? String ?? "English"
         self.region = UserDefaults.standard.object(forKey: "region") as? String ?? "Hong Kong"
+        self.email = UserDefaults.standard.object(forKey: "password") as? String ?? ""
         
     }
     
