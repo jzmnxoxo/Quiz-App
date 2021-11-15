@@ -76,6 +76,7 @@ struct LoginView: View {
     
     @State var email = ""
     @State var password = ""
+    @State private var isHidden: Bool = true
     @EnvironmentObject var viewModel: AppViewModel
     
     var body: some View {
@@ -93,11 +94,27 @@ struct LoginView: View {
                     .padding()
                     .background(Color(.secondarySystemBackground))
                 
-                SecureField("Password", text: $password)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
+                ZStack(alignment: .trailing) {
+                    if isHidden {
+                        SecureField("Password", text: $password)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                    } else {
+                        TextField("Password", text: $password)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                    }
+                    Button(action: {
+                        isHidden.toggle()
+                    }) {
+                        Image(systemName: isHidden ? "eye.slash" : "eye")
+                            .accentColor(.gray)
+                    }
+                }
                 
                 Button(action: {
                     guard !email.isEmpty, !password.isEmpty else {

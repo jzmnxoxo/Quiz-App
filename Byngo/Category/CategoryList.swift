@@ -12,14 +12,14 @@ struct CategoryList: View {
     @EnvironmentObject var categoryData: ModelDataCat
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             List(categoryData.categories) {category in
                 NavigationLink(destination: CategoryDetail(category: category)) {
                     CategoryRow(category: category)
                 }
             }
             .navigationTitle("Category")
-        }
+//       
     }
 }
 

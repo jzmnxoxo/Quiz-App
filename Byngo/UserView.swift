@@ -9,13 +9,13 @@ import SwiftUI
 import Combine
 
 struct UserView: View {
-
+    
     @ObservedObject var userSettings = UserSettings()
     @EnvironmentObject var viewModel: AppViewModel
     @State private var isHidden: Bool = true
-
+    
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 Spacer()
                 HStack {
@@ -29,46 +29,33 @@ struct UserView: View {
                 Form {
                     Section(header: Text("Username")) {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
-
-                        ZStack(alignment: .trailing) {
-                            if isHidden {
-                                SecureField("Password", text: $userSettings.password)
-                            } else {
-                                TextField("Password", text: $userSettings.password)
-                            }
-                            Button(action: {
-                                isHidden.toggle()
-                            }) {
-                                Image(systemName: isHidden ? "eye.slash" : "eye")
-                                    .accentColor(.gray)
-                            }
+                    }
+                    Section{
+                        NavigationLink(destination: StatsView(statRouter: StatRouter())){
+                            Text("Statistics")
                         }
                     }
-                    //                        TextField("Password", text: $userSettings.password)
-                    NavigationLink(destination: StatsView(statRouter: StatRouter())){
-                        Text("Statistics")
-                    }
-                    
+                    Button(action: {
+                        viewModel.logout()
+                    }, label: {
+                        Text("Log out ")
+                            .multilineTextAlignment(.center)
+      
+                    })
                 }
+     
                 
-                Button(action: {
-                    viewModel.logout()
-                }, label: {
-                    Text("Log out")
-                        .frame(width: 200, height: 50)
-                        
-                    
-                })
             }
-            .navigationTitle("Account")
-
-        }
+//        }
+        .navigationTitle("Account")
         
-
     }
-
-
+    
+    
 }
+
+
+
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {

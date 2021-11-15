@@ -12,7 +12,7 @@ struct SettingsView: View {
     @ObservedObject var userSettings = UserSettings()
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             Form {
                 
                 Section(header: Text("Sounds")) {
@@ -38,7 +38,7 @@ struct SettingsView: View {
                 }
                 .edgesIgnoringSafeArea(.all)
             .navigationBarTitle("Settings")
-        }
+//        }
         .edgesIgnoringSafeArea(.all)
     }
 }
