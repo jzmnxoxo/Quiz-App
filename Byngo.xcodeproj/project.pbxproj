@@ -11,7 +11,6 @@
 		696E2EBA27414F1C006B1461 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB327414F1B006B1461 /* CategoryList.swift */; };
 		696E2EBB27414F1C006B1461 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB427414F1B006B1461 /* CategoryDetail.swift */; };
 		696E2EBC27414F1C006B1461 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB527414F1C006B1461 /* CategoryRow.swift */; };
-		696E2EBD27414F1C006B1461 /* CategoryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB627414F1C006B1461 /* CategoryAppApp.swift */; };
 		696E2EBE27414F1C006B1461 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB727414F1C006B1461 /* Category.swift */; };
 		69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28D2740157F001EC42C /* ByngoApp.swift */; };
 		69ABC2902740157F001EC42C /* CoreDataTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */; };
@@ -39,7 +38,6 @@
 		696E2EB327414F1B006B1461 /* CategoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		696E2EB427414F1B006B1461 /* CategoryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
 		696E2EB527414F1C006B1461 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
-		696E2EB627414F1C006B1461 /* CategoryAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryAppApp.swift; sourceTree = "<group>"; };
 		696E2EB727414F1C006B1461 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		69ABC28A2740157F001EC42C /* Byngo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Byngo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69ABC28D2740157F001EC42C /* ByngoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByngoApp.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 			children = (
 				696E2EB127414F1B006B1461 /* datamodel.swift */,
 				696E2EB727414F1C006B1461 /* Category.swift */,
-				696E2EB627414F1C006B1461 /* CategoryAppApp.swift */,
 				696E2EB427414F1B006B1461 /* CategoryDetail.swift */,
 				696E2EB327414F1B006B1461 /* CategoryList.swift */,
 				696E2EB527414F1C006B1461 /* CategoryRow.swift */,
