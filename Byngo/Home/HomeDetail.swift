@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeDetail: View {
     
-    @EnvironmentObject var homeData: ModelDataHome
+    @StateObject private var homeData = ModelDataHome()
     @Environment(\.presentationMode) var presentationMode
     @State var home: Home
     

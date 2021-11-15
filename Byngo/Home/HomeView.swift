@@ -9,9 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var userSettings = UserSettings()
-    //let username = $userSettings.string("username")
     
-    @EnvironmentObject var homeData: ModelDataHome
+    @StateObject private var homeData = ModelDataHome()
     
     var body: some View {
         
