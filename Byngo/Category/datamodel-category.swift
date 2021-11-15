@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ModelData: ObservableObject {
+class ModelDataCat: ObservableObject {
     
     @Published var categories:[Category] = []
     

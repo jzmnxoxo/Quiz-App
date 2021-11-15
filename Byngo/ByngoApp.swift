@@ -11,12 +11,14 @@ import SwiftUI
 struct ByngoApp: App {
     //let persistenceController = PersistenceController.shared
     @StateObject var viewRouter = ViewRouter()
-    @StateObject private var categoryData = ModelData()
+    @StateObject private var categoryData = ModelDataCat()
+    @StateObject private var homeData = ModelDataHome()
 
     var body: some Scene {
         WindowGroup {
             ContentView(viewRouter: viewRouter)
                 .environmentObject(categoryData)
+                .environmentObject(homeData)
                 //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

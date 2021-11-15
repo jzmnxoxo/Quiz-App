@@ -23,17 +23,6 @@ struct HomeDetail: View {
             TextField("Desc", text: $homeData.homes[HomeIndex].desc)
         }
         .padding()
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(
-            leading:
-                Button("Back") {
-                    self.presentationMode.wrappedValue.dismiss()
-                },
-            trailing:
-                Button("Undo") {
-                    homeData.homes[HomeIndex]=home
-                }
-        )
     }
 }
 
