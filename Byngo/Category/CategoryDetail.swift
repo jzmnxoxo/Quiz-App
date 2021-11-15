@@ -14,7 +14,7 @@ struct CategoryDetail: View {
     @Environment(\.presentationMode) var presentationMode
     @State var category: Category
     
-    @State var selectedDifficulty: Int = 1
+    @State var selectedDifficulty: Int
     
     var categoryIndex: Int {
         categoryData.categories.firstIndex(where: {$0.id==category.id}) ?? 0
@@ -35,7 +35,7 @@ struct CategoryDetail: View {
             //beginner
             Button( action: {
                 selectedDifficulty = 1
-                ConfirmQuizView(category: categoryData.categories[categoryIndex], selectedDifficulty: 1)
+                ConfirmQuizView(category: categoryData.categories[categoryIndex])
             }) {
                 ZStack {
                     Rectangle()
@@ -59,7 +59,7 @@ struct CategoryDetail: View {
             //intermediate
             Button( action: {
                 selectedDifficulty = 2
-                ConfirmQuizView(category: categoryData.categories[categoryIndex], selectedDifficulty: 2)
+                ConfirmQuizView(category: categoryData.categories[categoryIndex])
             }) {
                 ZStack {
                     Rectangle()
@@ -83,7 +83,7 @@ struct CategoryDetail: View {
             //advanced
             Button( action: {
                 selectedDifficulty = 3
-                ConfirmQuizView(category: categoryData.categories[categoryIndex], selectedDifficulty: 3)
+                ConfirmQuizView(category: categoryData.categories[categoryIndex])
             }) {
                 ZStack {
                     Rectangle()

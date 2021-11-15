@@ -20,6 +20,7 @@ struct ConfirmQuizView: View {
     var categoryIndex: Int {
         categoryData.categories.firstIndex(where: {$0.id==category.id}) ?? 0
     }
+
     
     var body: some View {
         
@@ -28,7 +29,9 @@ struct ConfirmQuizView: View {
             Text(category.title)
                 .font(.largeTitle)
                 .bold()
-            
+//            Text(String(selectedDifficulty))
+//                .font(.largeTitle)
+//                .bold()
             
         }
     }
@@ -39,7 +42,7 @@ struct ConfirmQuizView_Previews: PreviewProvider {
     static var categoryData = ModelDataCat()
     
     static var previews: some View {
-        ConfirmQuizView(category: categoryData.categories[0], selectedDifficulty: 1)
+        ConfirmQuizView(category: categoryData.categories[0])
             .environmentObject(ModelDataCat())
     }
 }
