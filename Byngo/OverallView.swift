@@ -29,35 +29,44 @@ class OverallDataContainer : ObservableObject {
     }
 }
 
-struct PieOverall : View {
-    @ObservedObject var charDataObj = OverallDataContainer()
+struct DonutChart : View {
+    @ObservedObject var overallDataObj = OverallDataContainer()
     @State var indexOfTappedSlice = -1
     var body: some View {
         VStack {
-            //MARK:- Pie Slices
             ZStack {
-                ForEach(0..<charDataObj.overallData.count) { index in
+                ForEach(0..<overallDataObj.overallData.count) { index in
                     Circle()
-                        .trim(from: index == 0 ? 0.0 : charDataObj.overallData[index-1].value/100,
-                              to: charDataObj.overallData[index].value/100)
-                        .stroke(charDataObj.overallData[index].color,lineWidth: 100)
+                        .trim(from: index == 0 ? 0.0 : overallDataObj.overallData[index-1].value/100,
+                              to: overallDataObj.overallData[index].value/100)
+                        .stroke(overallDataObj.overallData[index].color,lineWidth: 50)
+                        .onTapGesture {
+                            indexOfTappedSlice = indexOfTappedSlice == index ? -1 : index
+                        }
                         .scaleEffect(index == indexOfTappedSlice ? 1.1 : 1.0)
                         .animation(.spring())
                 }
-            }.frame(width: 100, height: 200)
-            .onAppear() {
-                self.charDataObj.calc()
+                if indexOfTappedSlice != -1 {
+//                    Text(overallDataObj.overallData[indexOfTappedSlice].category)
+                    Text(String(format: "%.2f", Double(overallDataObj.overallData[indexOfTappedSlice].percent))+"%")
+                        .font(.title)
+                }
             }
-            
-            ForEach(0..<charDataObj.overallData.count) { index in
+            .frame(width: 200, height: 250)
+            .padding()
+            .onAppear() {
+                self.overallDataObj.calc()
+            }
+            ForEach(0..<overallDataObj.overallData.count) { index in
                            HStack {
-                               Text((charDataObj.overallData[index].category)+" "+String(format: "%.2f", Double(charDataObj.overallData[index].percent))+"%")
+                               Text(overallDataObj.overallData[index].category)
+//                               Text(String(format: "%.2f", Double(overallDataObj.overallData[index].percent))+"%")
                                    .onTapGesture {
                                        indexOfTappedSlice = indexOfTappedSlice == index ? -1 : index
                                    }
                                    .font(indexOfTappedSlice == index ? .headline : .subheadline)
-                               RoundedRectangle(cornerRadius: 3)
-                                   .fill(charDataObj.overallData[index].color)
+                               RoundedRectangle(cornerRadius: 8)
+                                   .fill(overallDataObj.overallData[index].color)
                                    .frame(width: 15, height: 15)
                            }
                        }
@@ -72,7 +81,7 @@ struct PieOverall : View {
 
 struct OverallView: View {
     var body: some View {
-        PieOverall()
+        DonutChart()
     }
 }
 

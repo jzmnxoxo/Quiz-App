@@ -4,7 +4,6 @@ import SwiftUI
 struct StatsView: View {
     @StateObject var statRouter:StatRouter
     var body: some View {
-        NavigationView{
             GeometryReader{ geometry in
                 VStack{
                     HStack{
@@ -13,7 +12,7 @@ struct StatsView: View {
                     }
                     .frame(width: geometry.size.width, height: geometry.size.height/8)
                     .background(Color.clear.shadow(radius: 2))
-                    Spacer()
+                    
                     switch statRouter.currentStat{
                     case .overall:
                         OverallView()
@@ -22,10 +21,10 @@ struct StatsView: View {
                     }
                     Spacer()
                 }
+                .navigationTitle("Statistics")
                 .edgesIgnoringSafeArea(.bottom)
             }
-            .navigationTitle("Statistics")
-        }
+
                 
 
 
