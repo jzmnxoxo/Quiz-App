@@ -25,6 +25,7 @@ struct ByngoApp: App {
                 .environmentObject(homeData)
                 .environmentObject(viewModel)
                 //.environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
         }
     }
     

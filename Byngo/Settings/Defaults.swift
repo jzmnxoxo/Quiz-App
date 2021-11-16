@@ -54,6 +54,7 @@ class UserSettings: ObservableObject {
         }
     }
     
+    
     @Published var language: String = UserDefaults.standard.string(forKey: "language") ?? UserSettings.langs[0] {
         didSet {
             UserDefaults.standard.set(self.language,forKey: "language")
@@ -70,7 +71,7 @@ class UserSettings: ObservableObject {
     //static var ids = [123456, 543523, 984752, 234213]
     static var regions = ["Hong Kong", "Taiwan", "United States", "Japan"]
     
-    init(){
+    init() {
         self.username = UserDefaults.standard.object(forKey: "username") as? String ?? "User"
         self.music = UserDefaults.standard.object(forKey: "music") as? Bool ?? true
         self.soundEffects = UserDefaults.standard.object(forKey: "soundEffects") as? Bool ?? true
@@ -79,7 +80,6 @@ class UserSettings: ObservableObject {
         self.language = UserDefaults.standard.object(forKey: "language") as? String ?? "English"
         self.region = UserDefaults.standard.object(forKey: "region") as? String ?? "Hong Kong"
         self.email = UserDefaults.standard.object(forKey: "password") as? String ?? ""
-
         
     }
     

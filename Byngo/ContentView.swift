@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @StateObject var viewRouter: ViewRouter
     
+    
     var body: some View {
         GeometryReader{ geometry in
             VStack{
