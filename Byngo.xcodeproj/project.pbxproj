@@ -40,6 +40,7 @@
 		DCDDAC04274244D100F27AC2 /* datamodel-home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC03274244D100F27AC2 /* datamodel-home.swift */; };
 		DCDDAC062742454800F27AC2 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC052742454800F27AC2 /* HomeList.swift */; };
 		DCDDAC08274245F700F27AC2 /* HomeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC07274245F700F27AC2 /* HomeDetail.swift */; };
+		E6793A1427439AB900C4BC34 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6793A1327439AB900C4BC34 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		DCDDAC052742454800F27AC2 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		DCDDAC07274245F700F27AC2 /* HomeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetail.swift; sourceTree = "<group>"; };
 		E3F4AFD7672E4877DFE26672 /* Pods-Byngo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Byngo.release.xcconfig"; path = "Target Support Files/Pods-Byngo/Pods-Byngo.release.xcconfig"; sourceTree = "<group>"; };
+		E6793A1327439AB900C4BC34 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		E8220E6D234CC78503049D51 /* Pods_Byngo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Byngo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				69AE12252742725A00F0C5D9 /* GoogleService-Info.plist */,
 				69ABC29627401584001EC42C /* Persistence.swift */,
 				69F30B3927411DBD003BA6AE /* LocationManager.swift */,
+				E6793A1327439AB900C4BC34 /* SwiftUIView.swift */,
 				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
 				DC5B12F727439C0000AB1BCF /* ImageChangeView.swift */,
 				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
@@ -365,6 +368,7 @@
 				696E2EBA27414F1C006B1461 /* CategoryList.swift in Sources */,
 				DCDDAC00274244A400F27AC2 /* Home.swift in Sources */,
 				696E2EBE27414F1C006B1461 /* Category.swift in Sources */,
+				E6793A1427439AB900C4BC34 /* SwiftUIView.swift in Sources */,
 				DCDDAC04274244D100F27AC2 /* datamodel-home.swift in Sources */,
 				DCDDAC08274245F700F27AC2 /* HomeDetail.swift in Sources */,
 			);
