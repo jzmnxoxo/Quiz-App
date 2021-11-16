@@ -30,7 +30,6 @@
 		69E042C0274167990058E9D3 /* OverallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E042BC274167990058E9D3 /* OverallView.swift */; };
 		69E042C1274167990058E9D3 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E042BD274167990058E9D3 /* StatsView.swift */; };
 		69E042C2274167990058E9D3 /* ByCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E042BF274167990058E9D3 /* ByCategoryView.swift */; };
-		69E042C3274167990058E9D3 /* StatsTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E042BE274167990058E9D3 /* StatsTabs.swift */; };
 		69E042C6274169D10058E9D3 /* StatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E042C5274169D10058E9D3 /* StatRouter.swift */; };
 		69F30B3A27411DBE003BA6AE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F30B3927411DBD003BA6AE /* LocationManager.swift */; };
 		7D3283FC6DC02F122202571F /* Pods_Byngo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8220E6D234CC78503049D51 /* Pods_Byngo.framework */; };
@@ -56,7 +55,7 @@
 		69ABC29927401584001EC42C /* Byngo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Byngo.xcdatamodel; sourceTree = "<group>"; };
 		69ABC2A0274019B4001EC42C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Byngo/ContentView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A1274019B4001EC42C /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Byngo/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
-		69ABC2A2274019B4001EC42C /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryView.swift; path = Byngo/HistoryView.swift; sourceTree = SOURCE_ROOT; };
+		69ABC2A2274019B4001EC42C /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryView.swift; path = Byngo/History/HistoryView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A4274019B4001EC42C /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewRouter.swift; path = Byngo/ViewRouter.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A5274019B4001EC42C /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserView.swift; path = Byngo/UserView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A7274019B4001EC42C /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Byngo/Home/HomeView.swift; sourceTree = SOURCE_ROOT; };
@@ -66,7 +65,6 @@
 		69AE12252742725A00F0C5D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		69E042BC274167990058E9D3 /* OverallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallView.swift; sourceTree = "<group>"; };
 		69E042BD274167990058E9D3 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
-		69E042BE274167990058E9D3 /* StatsTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTabs.swift; sourceTree = "<group>"; };
 		69E042BF274167990058E9D3 /* ByCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCategoryView.swift; sourceTree = "<group>"; };
 		69E042C5274169D10058E9D3 /* StatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatRouter.swift; sourceTree = "<group>"; };
 		69F30B3927411DBD003BA6AE /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -114,8 +112,8 @@
 		696E2EC02741529A006B1461 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				69ABC2A1274019B4001EC42C /* SettingsView.swift */,
 				69ABC2B62740F27B001EC42C /* Defaults.swift */,
+				69ABC2A1274019B4001EC42C /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -143,20 +141,18 @@
 			children = (
 				69ABC2B02740273A001EC42C /* Assets.xcassets */,
 				69AE12252742725A00F0C5D9 /* GoogleService-Info.plist */,
-				69ABC28D2740157F001EC42C /* ByngoApp.swift */,
-				696E2EBF274150C6006B1461 /* Category */,
-				69ABC2A0274019B4001EC42C /* ContentView.swift */,
-				69AE12232742506E00F0C5D9 /* AuthView.swift */,
-				69ABC2A5274019B4001EC42C /* UserView.swift */,
-				69E042C4274167AA0058E9D3 /* Statistics */,
-				69ABC2A4274019B4001EC42C /* ViewRouter.swift */,
-				69ABC2A2274019B4001EC42C /* HistoryView.swift */,
-				DCDDABFE2742444600F27AC2 /* Home */,
-				696E2EC02741529A006B1461 /* Settings */,
 				69ABC29627401584001EC42C /* Persistence.swift */,
 				69F30B3927411DBD003BA6AE /* LocationManager.swift */,
 				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
 				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
+				69ABC28D2740157F001EC42C /* ByngoApp.swift */,
+				69AE12232742506E00F0C5D9 /* AuthView.swift */,
+				69ABC2A0274019B4001EC42C /* ContentView.swift */,
+				696E2EBF274150C6006B1461 /* Category */,
+				69E042C4274167AA0058E9D3 /* User */,
+				DC5B12E727438A6B00AB1BCF /* History */,
+				DCDDABFE2742444600F27AC2 /* Home */,
+				696E2EC02741529A006B1461 /* Settings */,
 				69ABC29327401584001EC42C /* Preview Content */,
 			);
 			path = Byngo;
@@ -170,16 +166,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		69E042C4274167AA0058E9D3 /* Statistics */ = {
+		69E042C4274167AA0058E9D3 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				69E042BF274167990058E9D3 /* ByCategoryView.swift */,
-				69E042BC274167990058E9D3 /* OverallView.swift */,
-				69E042C5274169D10058E9D3 /* StatRouter.swift */,
-				69E042BE274167990058E9D3 /* StatsTabs.swift */,
-				69E042BD274167990058E9D3 /* StatsView.swift */,
+				69ABC2A4274019B4001EC42C /* ViewRouter.swift */,
+				69ABC2A5274019B4001EC42C /* UserView.swift */,
+				DC5B12E827438A9A00AB1BCF /* Statistics */,
 			);
-			name = Statistics;
+			name = User;
 			sourceTree = "<group>";
 		};
 		B1E06F6A0EC8BFE1679E2CBA /* Pods */ = {
@@ -189,6 +183,25 @@
 				E3F4AFD7672E4877DFE26672 /* Pods-Byngo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC5B12E727438A6B00AB1BCF /* History */ = {
+			isa = PBXGroup;
+			children = (
+				69ABC2A2274019B4001EC42C /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		DC5B12E827438A9A00AB1BCF /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				69E042C5274169D10058E9D3 /* StatRouter.swift */,
+				69E042BD274167990058E9D3 /* StatsView.swift */,
+				69E042BC274167990058E9D3 /* OverallView.swift */,
+				69E042BF274167990058E9D3 /* ByCategoryView.swift */,
+			);
+			name = Statistics;
 			sourceTree = "<group>";
 		};
 		DCDDABFE2742444600F27AC2 /* Home */ = {
@@ -330,7 +343,6 @@
 				69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */,
 				696E2EBB27414F1C006B1461 /* CategoryDetail.swift in Sources */,
 				696E2EB827414F1C006B1461 /* datamodel-category.swift in Sources */,
-				69E042C3274167990058E9D3 /* StatsTabs.swift in Sources */,
 				DCDDABFD2742443F00F27AC2 /* HomeRow.swift in Sources */,
 				69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */,
 				69ABC2A9274019B4001EC42C /* SettingsView.swift in Sources */,
