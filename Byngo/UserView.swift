@@ -25,10 +25,23 @@ struct UserView: View {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
                     }
                     Section(header: Text("Email")) {
-                        Text("")
+                        Text("**********@gmail.com")
                     }
                     Section(header: Text("Password")) {
-                        Text("")
+                        HStack {
+                            if isHidden {
+                                Text("**********")
+                            } else {
+                                Text("1234567890")
+                            }
+                            Spacer()
+                            Button(action: {
+                                isHidden.toggle()
+                            }) {
+                                Image(systemName: isHidden ? "eye.slash" : "eye")
+                                    .accentColor(.gray)
+                            }
+                        }
                     }
                     Section {
                         NavigationLink(destination: StatsView(statRouter: StatRouter())) {

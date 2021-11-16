@@ -47,7 +47,7 @@ class AppViewModel: ObservableObject {
     func logout() {
         try? auth.signOut()
         
-        self.loggedIn = false
+        self.loggedIn=false
     }
 }
 
@@ -55,7 +55,7 @@ struct AuthView: View {
     @EnvironmentObject var viewModel: AppViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationView{
             if viewModel.loggedIn {
                 ContentView(viewRouter: ViewRouter())
                 
@@ -78,15 +78,16 @@ struct LoginView: View {
     @State private var isHidden: Bool = true
     @EnvironmentObject var viewModel: AppViewModel
     
+    
     var body: some View {
         
-        VStack{
+        VStack {
             Image("avatar2")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 160, height: 160)
             
-            VStack{
+            VStack {
                 TextField("Email Address", text: $email)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
@@ -114,14 +115,18 @@ struct LoginView: View {
                             .accentColor(.gray)
                     }
                 }
+                Text("Password contains at least 6 characters")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                    .padding(.bottom )
                 
                 Button(action: {
                     guard !email.isEmpty, !password.isEmpty else {
                         return
                     }
                     viewModel.login(email: email, password: password)
-                }, label: {
-                    Text("Sign in")
+                }, label:{
+                    Text("Log in")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
                         .cornerRadius(30)
@@ -144,6 +149,7 @@ struct SignUpView: View {
     @State var email = ""
     @State var password = ""
     @EnvironmentObject var viewModel: AppViewModel
+    @State private var isHidden: Bool = true
     
     var body: some View {
         
@@ -160,11 +166,31 @@ struct SignUpView: View {
                     .padding()
                     .background(Color(.secondarySystemBackground))
                 
-                SecureField("Password", text: $password)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
+                ZStack(alignment: .trailing) {
+                    if isHidden {
+                        SecureField("Password", text: $password)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                    } else {
+                        TextField("Password", text: $password)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                    }
+                    Button(action: {
+                        isHidden.toggle()
+                    }) {
+                        Image(systemName: isHidden ? "eye.slash" : "eye")
+                            .accentColor(.gray)
+                    }
+                }
+                Text("Password contains at least 6 characters")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                    .padding(.bottom)
                 
                 Button(action: {
                     
@@ -174,7 +200,7 @@ struct SignUpView: View {
                     
                     viewModel.signUp(email: email, password: password)
                     
-                }, label: {
+                }, label:{
                     Text("Create Account")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
