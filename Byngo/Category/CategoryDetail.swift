@@ -15,8 +15,9 @@ struct CategoryDetail: View {
     @State var category: Category
     
     @State var selected: Int = 0
-    
     @State private var isSelected = false
+    
+    @State private var isStarted = false
     
     let Difficulty = ["Beginner", "Intermediate", "Advanced"]
     
