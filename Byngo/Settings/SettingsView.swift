@@ -24,8 +24,8 @@ struct SettingsView: View {
                     Toggle(isOn: $userSettings.soundEffects) {
                         Text("Sound Effects")
                     }
-                    Toggle(isOn: $userSettings.darkMode) {
-                        Text("Dark Mode")
+                    Toggle(isOn: $userSettings.notif) {
+                        Text("Notification")
                     }
                 }
                 Section(header: Text("Language & Region")) {

@@ -48,9 +48,9 @@ class UserSettings: ObservableObject {
         }
     }
     
-    @Published var darkMode : Bool {
+    @Published var notif : Bool {
         didSet {
-            UserDefaults.standard.set(darkMode, forKey: "darkMode")
+            UserDefaults.standard.set(notif, forKey: "notif")
         }
     }
     
@@ -75,7 +75,7 @@ class UserSettings: ObservableObject {
         self.username = UserDefaults.standard.object(forKey: "username") as? String ?? "User"
         self.music = UserDefaults.standard.object(forKey: "music") as? Bool ?? true
         self.soundEffects = UserDefaults.standard.object(forKey: "soundEffects") as? Bool ?? true
-        self.darkMode = UserDefaults.standard.object(forKey: "darkMode") as? Bool ?? false
+        self.notif = UserDefaults.standard.object(forKey: "notif") as? Bool ?? false
         self.password = UserDefaults.standard.object(forKey: "password") as? String ?? ""
         self.language = UserDefaults.standard.object(forKey: "language") as? String ?? "English"
         self.region = UserDefaults.standard.object(forKey: "region") as? String ?? "Hong Kong"
