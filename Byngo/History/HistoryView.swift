@@ -17,6 +17,24 @@ struct HistoryView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
+    func loadData() {
+        if items.count == 0 {
+            let t1 = Item(context: self.viewContext)
+            t1.id = 122
+            
+            let t2 = Item(context: self.viewContext)
+            t2.id = 123
+            
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
     
     var body: some View {
         VStack {
@@ -28,8 +46,8 @@ struct HistoryView: View {
                         } label: {
                             Text("item \(item.id)")
                         }
-                    }
-                }
+                    }.onDelete(perform: deleteItems)
+                }.onAppear(perform: loadData)
 //                .toolbar {
 //                    ToolbarItem {
 //                        Button(action: addItem) {
@@ -60,6 +78,20 @@ struct HistoryView: View {
         }
     }
     
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { items[$0] }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
 }
 
 
