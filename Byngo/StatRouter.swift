@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-class StatRouter: ObservableObject{
+class StatRouter: ObservableObject {
   
     @Published var currentStat: Stat = .overall
 
 }
-enum Stat{
+enum Stat {
     case overall
     case category
 }

@@ -16,7 +16,7 @@ class OverallDataContainer : ObservableObject {
          OverallData(color: Color(#colorLiteral(red: 0.4508578777, green: 0.9882974029, blue: 0.8376303315, alpha: 1)), percent: 22, value: 0, category: "English"),
          OverallData(color: Color(#colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1)), percent: 53, value: 0, category: "Maths")]
     
-    func calc(){
+    func calc() {
         var value : CGFloat = 0
         
         for i in 0..<overallData.count {
