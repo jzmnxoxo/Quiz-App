@@ -67,8 +67,14 @@ struct UserView: View {
                     Section(header: Text("Username")) {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
                     }
-                    Section{
-                        NavigationLink(destination: StatsView(statRouter: StatRouter())){
+                    Section(header: Text("Email")) {
+                        Text("")
+                    }
+                    Section(header: Text("Password")) {
+                        Text("")
+                    }
+                    Section {
+                        NavigationLink(destination: StatsView(statRouter: StatRouter())) {
                             Text("Statistics")
                         }
                     }
