@@ -18,8 +18,8 @@ class AppViewModel: ObservableObject {
         return auth.currentUser != nil
     }
     
-    func login(email: String, password: String){
-        auth.signIn(withEmail: email, password: password) {[weak self] result, error in
+    func login(email: String, password: String) {
+        auth.signIn(withEmail: email, password: password) { [weak self] result, error in
             guard result != nil, error == nil else {
                 return
             }
@@ -44,10 +44,10 @@ class AppViewModel: ObservableObject {
         }
     }
     
-    func logout(){
+    func logout() {
         try? auth.signOut()
         
-        self.loggedIn=false
+        self.loggedIn = false
     }
 }
 
@@ -55,17 +55,16 @@ struct AuthView: View {
     @EnvironmentObject var viewModel: AppViewModel
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             if viewModel.loggedIn {
                 ContentView(viewRouter: ViewRouter())
                 
                 
-            }
-            else{
+            } else {
                 LoginView()
             }
         }
-        .onAppear{
+        .onAppear {
             viewModel.loggedIn = viewModel.isLoggedin
         }
     }
@@ -121,7 +120,7 @@ struct LoginView: View {
                         return
                     }
                     viewModel.login(email: email, password: password)
-                }, label:{
+                }, label: {
                     Text("Sign in")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
@@ -148,13 +147,13 @@ struct SignUpView: View {
     
     var body: some View {
         
-        VStack{
+        VStack {
             Image("avatar2")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 160, height: 160)
             
-            VStack{
+            VStack {
                 TextField("Email Address", text: $email)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
@@ -175,7 +174,7 @@ struct SignUpView: View {
                     
                     viewModel.signUp(email: email, password: password)
                     
-                }, label:{
+                }, label: {
                     Text("Create Account")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)

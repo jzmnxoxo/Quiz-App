@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-class ViewRouter: ObservableObject{
+class ViewRouter: ObservableObject {
   
     @Published var currentPage: Page = .home
 
 }
-enum Page{
+enum Page {
     case user
     case category
     case home

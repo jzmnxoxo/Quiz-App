@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         GeometryReader{ geometry in
-            VStack{
+            VStack {
                 Spacer()
                 switch viewRouter.currentPage{
                 case .home:
@@ -30,11 +30,11 @@ struct ContentView: View {
                     SettingsView()
                 }
                 Spacer()
-                HStack{
+                HStack {
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .user, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "person.crop.circle", tabName: "Account")
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .category, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "books.vertical", tabName: "Categories")
                     
-                    ZStack{
+                    ZStack {
                         Circle()
                             .foregroundColor(.white)
                             .frame(width: geometry.size.width/7, height: geometry.size.width/7)
@@ -73,7 +73,7 @@ struct TabBarIcon: View {
     let systemIconName, tabName: String
     
     var body: some View {
-        VStack{
+        VStack {
             Image(systemName: systemIconName)
                 .resizable()
                 .aspectRatio( contentMode: .fit)
