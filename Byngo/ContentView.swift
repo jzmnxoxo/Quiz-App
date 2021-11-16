@@ -12,12 +12,11 @@ struct ContentView: View {
     
     @StateObject var viewRouter: ViewRouter
     
-    
     var body: some View {
         GeometryReader{ geometry in
             VStack {
                 Spacer()
-                switch viewRouter.currentPage{
+                switch viewRouter.currentPage {
                 case .home:
                     HomeView()
                 case .user:
@@ -25,7 +24,8 @@ struct ContentView: View {
                 case .category:
                     CategoryList()
                 case .history:
-                    HistoryView()
+//                    HistoryView()
+                    tempHistory()
                 case .settings:
                     SettingsView()
                 }
@@ -51,7 +51,7 @@ struct ContentView: View {
                     .offset(y: -geometry.size.height/8/3)
 
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .history, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "clock.arrow.circlepath", tabName: "History")
-                    TabBarIcon(viewRouter: viewRouter, assignedPage: .settings,width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "gearshape", tabName: "Settings")
+                    TabBarIcon(viewRouter: viewRouter, assignedPage: .settings, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "gearshape", tabName: "Settings")
                     
 
                 }
@@ -93,6 +93,9 @@ struct TabBarIcon: View {
 
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static var userSettings = UserSettings()
+    
     static var previews: some View {
         ContentView(viewRouter: ViewRouter())
     }

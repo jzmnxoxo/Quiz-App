@@ -30,12 +30,6 @@ class UserSettings: ObservableObject {
         }
     }
     
-//    @Published var id : Int = UserDefaults.standard.integer(forKey: "id") ?? UserSettings.ids[0]{
-//        didSet {
-//            UserDefaults.standard.set(id, forKey: "id")
-//        }
-//    }
-    
     @Published var music : Bool {
         didSet {
             UserDefaults.standard.set(music, forKey: "music")
@@ -57,18 +51,17 @@ class UserSettings: ObservableObject {
     
     @Published var language: String = UserDefaults.standard.string(forKey: "language") ?? UserSettings.langs[0] {
         didSet {
-            UserDefaults.standard.set(self.language,forKey: "language")
+            UserDefaults.standard.set(self.language, forKey: "language")
         }
     }
     
     @Published var region: String = UserDefaults.standard.string(forKey: "region") ?? UserSettings.regions[0] {
         didSet {
-            UserDefaults.standard.set(self.region,forKey: "region")
+            UserDefaults.standard.set(self.region, forKey: "region")
         }
     }
     
     static var langs = ["English", "Chinese", "Spanish","Japanese"]
-    //static var ids = [123456, 543523, 984752, 234213]
     static var regions = ["Hong Kong", "Taiwan", "United States", "Japan"]
     
     init() {

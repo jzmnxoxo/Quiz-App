@@ -26,6 +26,8 @@ struct ImageChangeView: View {
                     .shadow(radius: 5)
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
+                    .offset(x: 15)
+                    
             } else {
                 Image("avatar3")
                     .resizable()
@@ -34,6 +36,7 @@ struct ImageChangeView: View {
                     .shadow(radius: 5)
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
+                    .offset(x: 15)
             }
             Spacer()
             Text("Change Photo")

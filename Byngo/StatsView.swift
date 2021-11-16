@@ -17,7 +17,7 @@ struct StatsView: View {
                     case .overall:
                         OverallView()
                     case .category:
-                        ByCategoryView()
+                        ByCategoryList()
                     }
                     Spacer()
                 }

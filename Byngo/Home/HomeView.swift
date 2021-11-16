@@ -13,14 +13,15 @@ struct HomeView: View {
     @ObservedObject var userSettings = UserSettings()
     @ObservedObject var locationManager = LocationManager()
     @StateObject private var homeData = ModelDataHome()
+    
     @State var showAlert: Bool = false
     @State var showLocTrivia: Bool = false
     @State var venueLocation = CLLocation(latitude: 22.283, longitude: 114.1371)
     
-    func checkLocation(){
+    func checkLocation() {
         let radius: Double = 10
         let distance = locationManager.userLocation.distance(from: venueLocation)
-        if (distance < radius ){
+        if (distance < radius ) {
             showAlert = true
         }
     }
@@ -37,21 +38,19 @@ struct HomeView: View {
                     .font(.title)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.leading)
-                //                NavigationView {
+
                 List(homeData.homes) {home in
                     NavigationLink(destination: HomeDetail(home: home)) {
                         HomeRow(home: home)
                     }
                 }
-                .navigationTitle("Hi "+userSettings.username+"!")
+                .navigationTitle("Hi " + userSettings.username + "!")
                 
-                //.navigationBarTitle("Special Pick")
-                //                }
                 
             }
             .edgesIgnoringSafeArea(.bottom)
         }
-        NavigationLink(destination: LocTriviaView(), isActive: $showLocTrivia){
+        NavigationLink(destination: LocTriviaView(), isActive: $showLocTrivia) {
             EmptyView()
         }
         .alert(isPresented: $showAlert) {
@@ -64,6 +63,14 @@ struct HomeView: View {
     }
 }
 
+struct Avatar: View {
+    var body: some View {
+        Image("avatar3")
+            .resizable()
+            .frame(width: 120, height: 120)
+            .shadow(radius: 5)
+    }
+}
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
@@ -72,12 +79,4 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-struct Avatar: View {
-    var body: some View {
-        Image("avatar3")
-            .resizable()
-            .frame(width: 120, height: 120)
-            .shadow(radius: 5)
-            .offset(y: -30)
-    }
-}
+

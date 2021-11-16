@@ -18,9 +18,7 @@ struct HomeRow: View {
             Text(home.desc)
                 .font(.body)
                 .foregroundColor(Color.gray)
-            
-            
-            
+
         }
     }
 }

@@ -272,9 +272,7 @@ struct HomeDetail: View {
                     }
                 }
             }
-            
             Spacer()
-            
             
         }
         .padding()

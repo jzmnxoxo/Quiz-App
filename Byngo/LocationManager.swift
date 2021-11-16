@@ -1,8 +1,8 @@
 //
 //  LocationManager.swift
-//  ToGo
+//  Byngo
 //
-//  Created by Victor Lee on 29/10/2021.
+//  Created by felix on 29/10/2021.
 //
 
 import CoreLocation
@@ -11,17 +11,16 @@ import MapKit
 
 
 
-
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate{
+class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var showAlert: Bool = false
     
     private let locationManager=CLLocationManager()
     @Published var userLocation:CLLocation = CLLocation()
 
-    override init(){
+    override init() {
         super.init()
-        locationManager.delegate=self
+        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
     }
     

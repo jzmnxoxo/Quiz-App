@@ -47,7 +47,7 @@ class AppViewModel: ObservableObject {
     func logout() {
         try? auth.signOut()
         
-        self.loggedIn=false
+        self.loggedIn = false
     }
 }
 
@@ -77,8 +77,6 @@ struct LoginView: View {
     @EnvironmentObject var viewModel: AppViewModel
     
     @ObservedObject var userSettings = UserSettings()
-    
-    
     
     
     var body: some View {
@@ -120,7 +118,7 @@ struct LoginView: View {
                 Text("Password contains at least 6 characters")
                     .font(.footnote)
                     .foregroundColor(.gray)
-                    .padding(.bottom )
+                    .padding(.bottom)
                 
                 Button(action: {
                     guard !userSettings.email.isEmpty, !userSettings.password.isEmpty else {
@@ -131,8 +129,8 @@ struct LoginView: View {
                     Text("Log in")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
-                        .cornerRadius(30)
                         .background(Color.blue)
+                    .cornerRadius(15)
                 })
                 
                 NavigationLink("Create Account", destination: SignUpView())
