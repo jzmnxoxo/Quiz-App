@@ -13,18 +13,13 @@ struct CategoryList: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("   Category")
-                    .font(.largeTitle)
-                    .bold()
-                Spacer()
-            }
-            
             List(categoryData.categories) {category in
                 NavigationLink(destination: CategoryDetail(category: category)) {
                     CategoryRow(category: category)
                 }
             }
+            
+            .navigationBarTitle("Category")
         }
 
     }
