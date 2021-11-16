@@ -55,7 +55,7 @@ struct AuthView: View {
     @EnvironmentObject var viewModel: AppViewModel
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             if viewModel.loggedIn {
                 ContentView(viewRouter: ViewRouter())
                 
@@ -73,10 +73,12 @@ struct AuthView: View {
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
     @State private var isHidden: Bool = true
     @EnvironmentObject var viewModel: AppViewModel
+    
+    @ObservedObject var userSettings = UserSettings()
+    
+    
     
     
     var body: some View {
@@ -88,7 +90,7 @@ struct LoginView: View {
                 .frame(width: 160, height: 160)
             
             VStack {
-                TextField("Email Address", text: $email)
+                TextField("Email Address", text: $userSettings.email)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding()
@@ -96,13 +98,13 @@ struct LoginView: View {
                 
                 ZStack(alignment: .trailing) {
                     if isHidden {
-                        SecureField("Password", text: $password)
+                        SecureField("Password", text: $userSettings.password)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
                             .padding()
                             .background(Color(.secondarySystemBackground))
                     } else {
-                        TextField("Password", text: $password)
+                        TextField("Password", text: $userSettings.password)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
                             .padding()
@@ -121,11 +123,11 @@ struct LoginView: View {
                     .padding(.bottom )
                 
                 Button(action: {
-                    guard !email.isEmpty, !password.isEmpty else {
+                    guard !userSettings.email.isEmpty, !userSettings.password.isEmpty else {
                         return
                     }
-                    viewModel.login(email: email, password: password)
-                }, label:{
+                    viewModel.login(email: userSettings.email, password: userSettings.password)
+                }, label: {
                     Text("Log in")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
@@ -146,10 +148,10 @@ struct LoginView: View {
 
 struct SignUpView: View {
     
-    @State var email = ""
-    @State var password = ""
     @EnvironmentObject var viewModel: AppViewModel
     @State private var isHidden: Bool = true
+    
+    @ObservedObject var userSettings = UserSettings()
     
     var body: some View {
         
@@ -160,7 +162,7 @@ struct SignUpView: View {
                 .frame(width: 160, height: 160)
             
             VStack {
-                TextField("Email Address", text: $email)
+                TextField("Email Address", text: $userSettings.email)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding()
@@ -168,13 +170,13 @@ struct SignUpView: View {
                 
                 ZStack(alignment: .trailing) {
                     if isHidden {
-                        SecureField("Password", text: $password)
+                        SecureField("Password", text: $userSettings.password)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
                             .padding()
                             .background(Color(.secondarySystemBackground))
                     } else {
-                        TextField("Password", text: $password)
+                        TextField("Password", text: $userSettings.password)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
                             .padding()
@@ -194,11 +196,11 @@ struct SignUpView: View {
                 
                 Button(action: {
                     
-                    guard !email.isEmpty, !password.isEmpty else {
+                    guard !userSettings.email.isEmpty, !userSettings.password.isEmpty else {
                         return
                     }
                     
-                    viewModel.signUp(email: email, password: password)
+                    viewModel.signUp(email: userSettings.email, password: userSettings.password)
                     
                 }, label:{
                     Text("Create Account")

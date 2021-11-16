@@ -25,14 +25,14 @@ struct UserView: View {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
                     }
                     Section(header: Text("Email")) {
-                        Text("**********@gmail.com")
+                        Text(userSettings.email)
                     }
                     Section(header: Text("Password")) {
                         HStack {
                             if isHidden {
                                 Text("**********")
                             } else {
-                                Text("1234567890")
+                                Text(userSettings.password)
                             }
                             Spacer()
                             Button(action: {

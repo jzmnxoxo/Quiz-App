@@ -72,14 +72,16 @@ class UserSettings: ObservableObject {
     static var regions = ["Hong Kong", "Taiwan", "United States", "Japan"]
     
     init() {
-        self.username = UserDefaults.standard.object(forKey: "username") as? String ?? "User"
         self.music = UserDefaults.standard.object(forKey: "music") as? Bool ?? true
         self.soundEffects = UserDefaults.standard.object(forKey: "soundEffects") as? Bool ?? true
         self.notif = UserDefaults.standard.object(forKey: "notif") as? Bool ?? false
-        self.password = UserDefaults.standard.object(forKey: "password") as? String ?? ""
+        
         self.language = UserDefaults.standard.object(forKey: "language") as? String ?? "English"
         self.region = UserDefaults.standard.object(forKey: "region") as? String ?? "Hong Kong"
+        
+        self.username = UserDefaults.standard.object(forKey: "username") as? String ?? "User"
         self.email = UserDefaults.standard.object(forKey: "password") as? String ?? ""
+        self.password = UserDefaults.standard.object(forKey: "password") as? String ?? ""
         
     }
     
