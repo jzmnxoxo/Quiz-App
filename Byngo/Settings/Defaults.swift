@@ -37,25 +37,31 @@ class UserSettings: ObservableObject {
 //    }
     
     @Published var music : Bool {
-        didSet{
+        didSet {
             UserDefaults.standard.set(music, forKey: "music")
         }
     }
     
     @Published var soundEffects : Bool {
-        didSet{
+        didSet {
             UserDefaults.standard.set(soundEffects, forKey: "soundEffects")
         }
     }
     
-    @Published var language: String = UserDefaults.standard.string(forKey: "language") ?? UserSettings.langs[0]{
-        didSet{
+    @Published var darkMode : Bool {
+        didSet {
+            UserDefaults.standard.set(darkMode, forKey: "darkMode")
+        }
+    }
+    
+    @Published var language: String = UserDefaults.standard.string(forKey: "language") ?? UserSettings.langs[0] {
+        didSet {
             UserDefaults.standard.set(self.language,forKey: "language")
         }
     }
     
-    @Published var region: String = UserDefaults.standard.string(forKey: "region") ?? UserSettings.regions[0]{
-        didSet{
+    @Published var region: String = UserDefaults.standard.string(forKey: "region") ?? UserSettings.regions[0] {
+        didSet {
             UserDefaults.standard.set(self.region,forKey: "region")
         }
     }
@@ -68,10 +74,12 @@ class UserSettings: ObservableObject {
         self.username = UserDefaults.standard.object(forKey: "username") as? String ?? "User"
         self.music = UserDefaults.standard.object(forKey: "music") as? Bool ?? true
         self.soundEffects = UserDefaults.standard.object(forKey: "soundEffects") as? Bool ?? true
+        self.darkMode = UserDefaults.standard.object(forKey: "darkMode") as? Bool ?? false
         self.password = UserDefaults.standard.object(forKey: "password") as? String ?? ""
         self.language = UserDefaults.standard.object(forKey: "language") as? String ?? "English"
         self.region = UserDefaults.standard.object(forKey: "region") as? String ?? "Hong Kong"
         self.email = UserDefaults.standard.object(forKey: "password") as? String ?? ""
+
         
     }
     

@@ -16,20 +16,23 @@ struct SettingsView: View {
             Form {
                 
                 Section(header: Text("Sounds")) {
-                    Toggle(isOn: $userSettings.music){
+                    Toggle(isOn: $userSettings.music) {
                         Text("Music")
                     }
-                    Toggle(isOn: $userSettings.soundEffects){
+                    Toggle(isOn: $userSettings.soundEffects) {
                         Text("Sound Effects")
+                    }
+                    Toggle(isOn: $userSettings.darkMode) {
+                        Text("Dark Mode")
                     }
                 }
                 Section(header: Text("Language & Region")) {
-                    Picker(selection: $userSettings.language, label: Text("Language")){
+                    Picker(selection: $userSettings.language, label: Text("Language")) {
                         ForEach(UserSettings.langs, id: \.self ) {
                             language in Text(language)
                         }
                     }
-                    Picker(selection: $userSettings.region, label: Text("Region")){
+                    Picker(selection: $userSettings.region, label: Text("Region")) {
                         ForEach(UserSettings.regions, id: \.self ) {
                             region in Text(region)
                         }
