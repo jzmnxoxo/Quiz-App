@@ -14,7 +14,7 @@ import MapKit
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var showAlert: Bool = false
-    
+    @Published var venueLocation = CLLocation(latitude: 22.283, longitude: 114.1371)
     private let locationManager=CLLocationManager()
     @Published var userLocation:CLLocation = CLLocation()
 
@@ -34,6 +34,15 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         if locationManager.authorizationStatus == .authorizedAlways ||
             locationManager.authorizationStatus == .authorizedWhenInUse {
             locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func checkLocation(){
+        let radius: Double = 8000
+        let distance = userLocation.distance(from: venueLocation)
+        
+        if (distance < radius ){
+            showAlert = true
         }
     }
 }
