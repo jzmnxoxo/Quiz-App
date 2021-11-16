@@ -14,7 +14,7 @@ struct ByCategoryList: View {
     var body: some View {
         VStack {
             List(byCategoryData.byCategories) {byCategory in
-                NavigationLink(destination: ByCategoryDetail(byCategory: byCategory)) {
+                NavigationLink(destination: ByCategoryDetail()){ 
                     ByCategoryRow(byCategory: byCategory)
                 }
 //                Section(header: Text("")) {
