@@ -14,20 +14,12 @@ struct HomeView: View {
     @ObservedObject var locationManager = LocationManager()
     @StateObject private var homeData = ModelDataHome()
     
-    @State var showAlert: Bool = false
     @State var showLocTrivia: Bool = false
-    @State var venueLocation = CLLocation(latitude: 22.283, longitude: 114.1371)
-    
-    func checkLocation() {
-        let radius: Double = 10
-        let distance = locationManager.userLocation.distance(from: venueLocation)
-        if (distance < radius ) {
-            showAlert = true
-        }
-    }
-    
+    //var timer:Timer?
     
     var body: some View {
+//        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(locationManager.checkLocation), userInfo: nil, repeats: true)
+        
         
         GeometryReader{ geometry in
             VStack{
@@ -53,15 +45,18 @@ struct HomeView: View {
         NavigationLink(destination: LocTriviaView(), isActive: $showLocTrivia) {
             EmptyView()
         }
-        .alert(isPresented: $showAlert) {
+        .alert(isPresented: $locationManager.showAlert) {
             Alert(title: Text("Surprise!"),
                   message: Text("You reached a LocaTrivia Spot! Wanna know more about this place?"),
                   primaryButton: .default(Text("Sure!"), action: {self.showLocTrivia = true}),
                   secondaryButton: .cancel()
             )
         }
+//        .onDisappear(perform: timer.invalidate)
     }
+       
 }
+
 
 struct Avatar: View {
     var body: some View {
