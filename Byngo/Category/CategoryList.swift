@@ -12,14 +12,21 @@ struct CategoryList: View {
     @EnvironmentObject var categoryData: ModelDataCat
     
     var body: some View {
-        NavigationView {
+        VStack {
+            HStack {
+                Text("   Category")
+                    .font(.largeTitle)
+                    .bold()
+                Spacer()
+            }
+            
             List(categoryData.categories) {category in
                 NavigationLink(destination: CategoryDetail(category: category)) {
                     CategoryRow(category: category)
                 }
             }
-            .navigationTitle("Category")
-        }      
+        }
+
     }
 }
 
