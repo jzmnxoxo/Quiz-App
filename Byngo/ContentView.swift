@@ -24,8 +24,8 @@ struct ContentView: View {
                 case .category:
                     CategoryList()
                 case .history:
-//                    HistoryView()
-                    tempHistory()
+                    HistoryView()
+//                    tempHistory()
                 case .settings:
                     SettingsView()
                 }

@@ -14,6 +14,8 @@ struct UserView: View {
     @EnvironmentObject var viewModel: AppViewModel
     @State private var isHidden: Bool = true
     
+    @State private var email: String = ""
+    
     var body: some View {
 //        NavigationView {
             VStack {
@@ -25,7 +27,7 @@ struct UserView: View {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
                     }
                     Section(header: Text("Email")) {
-                        Text(userSettings.email)
+                        TextField("email", text: $email)
                     }
                     Section(header: Text("Password")) {
                         HStack {

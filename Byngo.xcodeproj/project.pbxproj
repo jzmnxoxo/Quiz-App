@@ -24,7 +24,6 @@
 		69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28D2740157F001EC42C /* ByngoApp.swift */; };
 		69ABC2902740157F001EC42C /* CoreDataTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */; };
 		69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69ABC29427401584001EC42C /* Preview Assets.xcassets */; };
-		69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC29827401584001EC42C /* Byngo.xcdatamodeld */; };
 		69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A0274019B4001EC42C /* ContentView.swift */; };
 		69ABC2A9274019B4001EC42C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A1274019B4001EC42C /* SettingsView.swift */; };
 		69ABC2AA274019B4001EC42C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A2274019B4001EC42C /* HistoryView.swift */; };
@@ -51,6 +50,8 @@
 		DC5B1311274409D300AB1BCF /* ByCategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B1310274409D300AB1BCF /* ByCategoryList.swift */; };
 		DC5B131427440B6C00AB1BCF /* ByCategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B131327440B6C00AB1BCF /* ByCategoryDetail.swift */; };
 		DCD01E0627458C4F00873450 /* CatConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD01E0527458C4F00873450 /* CatConfirm.swift */; };
+		DCD01E0827458D9D00873450 /* PersistenceH.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD01E0727458D9D00873450 /* PersistenceH.swift */; };
+		DCD01E0B27458DD600873450 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCD01E0927458DD600873450 /* History.xcdatamodeld */; };
 		DCDDABFD2742443F00F27AC2 /* HomeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDABFC2742443F00F27AC2 /* HomeRow.swift */; };
 		DCDDAC00274244A400F27AC2 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDABFF274244A400F27AC2 /* Home.swift */; };
 		DCDDAC04274244D100F27AC2 /* datamodel-home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC03274244D100F27AC2 /* datamodel-home.swift */; };
@@ -79,7 +80,6 @@
 		69ABC28D2740157F001EC42C /* ByngoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByngoApp.swift; sourceTree = "<group>"; };
 		69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTemplate.swift; sourceTree = "<group>"; };
 		69ABC29427401584001EC42C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		69ABC29927401584001EC42C /* Byngo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Byngo.xcdatamodel; sourceTree = "<group>"; };
 		69ABC2A0274019B4001EC42C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Byngo/ContentView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A1274019B4001EC42C /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Byngo/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A2274019B4001EC42C /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryView.swift; path = Byngo/History/HistoryView.swift; sourceTree = SOURCE_ROOT; };
@@ -105,6 +105,8 @@
 		DC5B1310274409D300AB1BCF /* ByCategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCategoryList.swift; sourceTree = "<group>"; };
 		DC5B131327440B6C00AB1BCF /* ByCategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCategoryDetail.swift; sourceTree = "<group>"; };
 		DCD01E0527458C4F00873450 /* CatConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatConfirm.swift; sourceTree = "<group>"; };
+		DCD01E0727458D9D00873450 /* PersistenceH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceH.swift; sourceTree = "<group>"; };
+		DCD01E0A27458DD600873450 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		DCDDABFC2742443F00F27AC2 /* HomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRow.swift; sourceTree = "<group>"; };
 		DCDDABFF274244A400F27AC2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DCDDAC03274244D100F27AC2 /* datamodel-home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "datamodel-home.swift"; sourceTree = "<group>"; };
@@ -182,7 +184,6 @@
 				69ABC2B02740273A001EC42C /* Assets.xcassets */,
 				E66A253B2744ED3600C2F0D1 /* Location */,
 				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
-				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
 				69ABC28D2740157F001EC42C /* ByngoApp.swift */,
 				69AE12232742506E00F0C5D9 /* AuthView.swift */,
 				69ABC2A0274019B4001EC42C /* ContentView.swift */,
@@ -230,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				69ABC2A2274019B4001EC42C /* HistoryView.swift */,
+				DCD01E0727458D9D00873450 /* PersistenceH.swift */,
+				DCD01E0927458DD600873450 /* History.xcdatamodeld */,
 				DC5B13042743FC4200AB1BCF /* tempHistory.swift */,
 			);
 			path = History;
@@ -424,16 +427,17 @@
 				69579BB42745523A0092522B /* PlaneView.swift in Sources */,
 				69579BBE2745593F0092522B /* LocRouter.swift in Sources */,
 				DCDDABFD2742443F00F27AC2 /* HomeRow.swift in Sources */,
-				69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */,
 				DC5B131427440B6C00AB1BCF /* ByCategoryDetail.swift in Sources */,
 				69ABC2A9274019B4001EC42C /* SettingsView.swift in Sources */,
 				69ABC2902740157F001EC42C /* CoreDataTemplate.swift in Sources */,
 				69E042C6274169D10058E9D3 /* StatRouter.swift in Sources */,
 				69F30B3A27411DBE003BA6AE /* LocationManager.swift in Sources */,
+				DCD01E0827458D9D00873450 /* PersistenceH.swift in Sources */,
 				DC5B1311274409D300AB1BCF /* ByCategoryList.swift in Sources */,
 				DC5B12F62743911E00AB1BCF /* ImagePicker.swift in Sources */,
 				69E042C1274167990058E9D3 /* StatsView.swift in Sources */,
 				DC5B12F827439C0000AB1BCF /* ImageChangeView.swift in Sources */,
+				DCD01E0B27458DD600873450 /* History.xcdatamodeld in Sources */,
 				DC5B13052743FC4200AB1BCF /* tempHistory.swift in Sources */,
 				69ABC2AD274019B4001EC42C /* UserView.swift in Sources */,
 				69ABC2AF274019B4001EC42C /* HomeView.swift in Sources */,
@@ -671,13 +675,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		69ABC29827401584001EC42C /* Byngo.xcdatamodeld */ = {
+		DCD01E0927458DD600873450 /* History.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				69ABC29927401584001EC42C /* Byngo.xcdatamodel */,
+				DCD01E0A27458DD600873450 /* History.xcdatamodel */,
 			);
-			currentVersion = 69ABC29927401584001EC42C /* Byngo.xcdatamodel */;
-			path = Byngo.xcdatamodeld;
+			currentVersion = DCD01E0A27458DD600873450 /* History.xcdatamodel */;
+			path = History.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

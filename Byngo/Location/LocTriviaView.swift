@@ -19,11 +19,11 @@ struct LocTriviaView: View {
                     case .threeD:
                         ThreeDView()
                     case .ar:
-                        if(choice.choice == 0){
+                        if (choice.choice == 0) {
                             ShipView()
-                        }else if (choice.choice == 1){
+                        } else if (choice.choice == 1) {
                             PlaneView()
-                        }else if (choice.choice == 2){
+                        } else if (choice.choice == 2) {
                             PostView()
                         }
                     }

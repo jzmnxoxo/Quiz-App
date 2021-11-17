@@ -2,7 +2,7 @@
 //  PersistenceH.swift
 //  Byngo
 //
-//  Created by iosuser on 16/11/2021.
+//  Created by felix on 16/11/2021.
 //
 
 import CoreData
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "History")
+        container = NSPersistentContainer(name: "Byngo")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
