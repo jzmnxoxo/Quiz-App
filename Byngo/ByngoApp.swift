@@ -12,7 +12,7 @@ import Firebase
 struct ByngoApp: App {
     
     @UIApplicationDelegateAdaptor (AppDelegate.self) var appDelegate
-    //let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController.shared
     @StateObject var viewRouter = ViewRouter()
     @StateObject private var categoryData = ModelDataCat()
     @StateObject private var homeData = ModelDataHome()
@@ -24,7 +24,7 @@ struct ByngoApp: App {
                 .environmentObject(categoryData)
                 .environmentObject(homeData)
                 .environmentObject(viewModel)
-                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
         }
     }
