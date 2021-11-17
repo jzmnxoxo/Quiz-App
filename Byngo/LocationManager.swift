@@ -37,7 +37,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
-    @objc func checkLocation(){
+    func checkLocation(){
         let radius: Double = 8000
         let distance = userLocation.distance(from: venueLocation)
         

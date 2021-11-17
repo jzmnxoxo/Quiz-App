@@ -18,7 +18,10 @@ struct HomeView: View {
     //var timer:Timer?
     
     var body: some View {
-//        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(locationManager.checkLocation), userInfo: nil, repeats: true)
+//        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(locationManager.checkLocation), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            locationManager.checkLocation()}
+                    
         
         
         GeometryReader{ geometry in
@@ -52,7 +55,7 @@ struct HomeView: View {
                   secondaryButton: .cancel()
             )
         }
-//        .onDisappear(perform: timer.invalidate)
+        .onDisappear(perform: timer.invalidate)
     }
        
 }
