@@ -13,9 +13,11 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for i in 0..<3 {
+        for i in 0..<2 {
             let newItem = Item(context: viewContext)
             newItem.id = Int16(i)
+            newItem.question = String(i)
+            newItem.subject = String(i)
         }
         do {
             try viewContext.save()
