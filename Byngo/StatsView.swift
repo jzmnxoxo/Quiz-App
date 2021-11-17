@@ -18,6 +18,7 @@ struct StatsView: View {
                         OverallView()
                     case .category:
                         ByCategoryList()
+                            .environmentObject(ModelDataByCat())
                     }
                     Spacer()
                 }
@@ -86,5 +87,6 @@ struct StatIcon: View {
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {
         StatsView(statRouter: StatRouter())
+            .environmentObject(ModelDataByCat())
     }
 }
