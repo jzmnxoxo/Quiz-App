@@ -26,9 +26,9 @@ struct UserView: View {
                     Section(header: Text("Username")) {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
                     }
-                    Section(header: Text("Email")) {
-                        TextField("email", text: $email)
-                    }
+    //                    Section(header: Text("Email")) {
+    //                        TextField("email", text: $email)
+    //                    }
                     Section(header: Text("Password")) {
                         HStack {
                             if isHidden {
