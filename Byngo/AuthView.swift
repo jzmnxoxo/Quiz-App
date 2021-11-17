@@ -204,8 +204,8 @@ struct SignUpView: View {
                     Text("Create Account")
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
-                        .cornerRadius(30)
                         .background(Color.blue)
+                    .cornerRadius(15)
                     
                 })
             }
