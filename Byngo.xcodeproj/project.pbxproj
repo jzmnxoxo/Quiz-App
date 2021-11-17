@@ -49,6 +49,9 @@
 		DCDDAC062742454800F27AC2 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC052742454800F27AC2 /* HomeList.swift */; };
 		DCDDAC08274245F700F27AC2 /* HomeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC07274245F700F27AC2 /* HomeDetail.swift */; };
 		E66A25422745015700C2F0D1 /* ferry.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E66A25412745015700C2F0D1 /* ferry.usdz */; };
+		E66A25802745080100C2F0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66A257D2745080100C2F0D1 /* AppDelegate.swift */; };
+		E66A25822745080100C2F0D1 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E66A257F2745080100C2F0D1 /* Experience.rcproject */; };
+		E66A258627450D9F00C2F0D1 /* LocARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66A258527450D9F00C2F0D1 /* LocARView.swift */; };
 		E6793A1427439AB900C4BC34 /* LocTriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6793A1327439AB900C4BC34 /* LocTriviaView.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +101,9 @@
 		DCDDAC07274245F700F27AC2 /* HomeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetail.swift; sourceTree = "<group>"; };
 		E3F4AFD7672E4877DFE26672 /* Pods-Byngo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Byngo.release.xcconfig"; path = "Target Support Files/Pods-Byngo/Pods-Byngo.release.xcconfig"; sourceTree = "<group>"; };
 		E66A25412745015700C2F0D1 /* ferry.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferry.usdz; sourceTree = "<group>"; };
+		E66A257D2745080100C2F0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E66A257F2745080100C2F0D1 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		E66A258527450D9F00C2F0D1 /* LocARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocARView.swift; path = ../../../bleh/bleh/LocARView.swift; sourceTree = "<group>"; };
 		E6793A1327439AB900C4BC34 /* LocTriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocTriviaView.swift; sourceTree = "<group>"; };
 		E8220E6D234CC78503049D51 /* Pods_Byngo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Byngo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +173,8 @@
 				69AE12252742725A00F0C5D9 /* GoogleService-Info.plist */,
 				69ABC2B02740273A001EC42C /* Assets.xcassets */,
 				69ABC29627401584001EC42C /* Persistence.swift */,
+				E66A257D2745080100C2F0D1 /* AppDelegate.swift */,
+				E66A257F2745080100C2F0D1 /* Experience.rcproject */,
 				E66A25412745015700C2F0D1 /* ferry.usdz */,
 				E66A253B2744ED3600C2F0D1 /* Location */,
 				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
@@ -265,6 +273,7 @@
 		E66A253B2744ED3600C2F0D1 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				E66A258527450D9F00C2F0D1 /* LocARView.swift */,
 				69F30B3927411DBD003BA6AE /* LocationManager.swift */,
 				E6793A1327439AB900C4BC34 /* LocTriviaView.swift */,
 			);
@@ -396,6 +405,7 @@
 				69ABC2AA274019B4001EC42C /* HistoryView.swift in Sources */,
 				69E042C0274167990058E9D3 /* OverallView.swift in Sources */,
 				69ABC29727401584001EC42C /* Persistence.swift in Sources */,
+				E66A25822745080100C2F0D1 /* Experience.rcproject in Sources */,
 				69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */,
 				696E2EBB27414F1C006B1461 /* CategoryDetail.swift in Sources */,
 				696E2EB827414F1C006B1461 /* datamodel-category.swift in Sources */,
@@ -408,10 +418,12 @@
 				69E042C6274169D10058E9D3 /* StatRouter.swift in Sources */,
 				69F30B3A27411DBE003BA6AE /* LocationManager.swift in Sources */,
 				DC5B1311274409D300AB1BCF /* ByCategoryList.swift in Sources */,
+				E66A25802745080100C2F0D1 /* AppDelegate.swift in Sources */,
 				DC5B12F62743911E00AB1BCF /* ImagePicker.swift in Sources */,
 				69E042C1274167990058E9D3 /* StatsView.swift in Sources */,
 				DC5B12F827439C0000AB1BCF /* ImageChangeView.swift in Sources */,
 				DC5B13052743FC4200AB1BCF /* tempHistory.swift in Sources */,
+				E66A258627450D9F00C2F0D1 /* LocARView.swift in Sources */,
 				69ABC2AD274019B4001EC42C /* UserView.swift in Sources */,
 				69ABC2AF274019B4001EC42C /* HomeView.swift in Sources */,
 				69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */,
@@ -556,6 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
+				DEVELOPMENT_TEAM = 3TH4VNUEL9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application requires camera access to provide AR experience";
@@ -589,6 +602,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
+				DEVELOPMENT_TEAM = 3TH4VNUEL9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application requires camera access to provide AR experience";

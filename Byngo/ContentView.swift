@@ -26,7 +26,7 @@ struct ContentView: View {
                 case .history:
 //                    HistoryView()
 //                    tempHistory()
-                    LocTriviaView()
+                    LocARView()
                 case .settings:
                     SettingsView()
                 }
