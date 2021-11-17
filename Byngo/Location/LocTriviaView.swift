@@ -29,7 +29,7 @@ struct LocTriviaView: View {
                     }
                     Spacer()
                 }
-                .navigationTitle("LocaTrivia📍")
+                .navigationTitle("LocaTrivia 📍")
                 .edgesIgnoringSafeArea(.bottom)
             }
 
