@@ -11,10 +11,10 @@
 		69579BB42745523A0092522B /* PlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BB32745523A0092522B /* PlaneView.swift */; };
 		69579BB62745527F0092522B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BB52745527F0092522B /* PostView.swift */; };
 		69579BBA2745570F0092522B /* post.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BB72745570A0092522B /* post.usdz */; };
-		69579BBB2745570F0092522B /* ferry.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BB82745570D0092522B /* ferry.usdz */; };
 		69579BBC2745570F0092522B /* plane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BB92745570F0092522B /* plane.usdz */; };
 		69579BBE2745593F0092522B /* LocRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BBD2745593F0092522B /* LocRouter.swift */; };
 		69579BC027455A050092522B /* ThreeDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BBF27455A050092522B /* ThreeDView.swift */; };
+		69579BC227456EB20092522B /* ship.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BC127456EB20092522B /* ship.usdz */; };
 		696E2EB827414F1C006B1461 /* datamodel-category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB127414F1B006B1461 /* datamodel-category.swift */; };
 		696E2EBA27414F1C006B1461 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB327414F1B006B1461 /* CategoryList.swift */; };
 		696E2EBB27414F1C006B1461 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB427414F1B006B1461 /* CategoryDetail.swift */; };
@@ -65,10 +65,10 @@
 		69579BB32745523A0092522B /* PlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneView.swift; sourceTree = "<group>"; };
 		69579BB52745527F0092522B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		69579BB72745570A0092522B /* post.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = post.usdz; sourceTree = "<group>"; };
-		69579BB82745570D0092522B /* ferry.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferry.usdz; sourceTree = "<group>"; };
 		69579BB92745570F0092522B /* plane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = plane.usdz; sourceTree = "<group>"; };
 		69579BBD2745593F0092522B /* LocRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocRouter.swift; sourceTree = "<group>"; };
 		69579BBF27455A050092522B /* ThreeDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDView.swift; sourceTree = "<group>"; };
+		69579BC127456EB20092522B /* ship.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ship.usdz; sourceTree = "<group>"; };
 		696E2EB127414F1B006B1461 /* datamodel-category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "datamodel-category.swift"; sourceTree = "<group>"; };
 		696E2EB327414F1B006B1461 /* CategoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		696E2EB427414F1B006B1461 /* CategoryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
@@ -279,9 +279,9 @@
 			children = (
 				696E6B5C27454517002B443C /* ShipView.swift */,
 				69579BBD2745593F0092522B /* LocRouter.swift */,
+				69579BC127456EB20092522B /* ship.usdz */,
 				69579BB92745570F0092522B /* plane.usdz */,
 				69579BB72745570A0092522B /* post.usdz */,
-				69579BB82745570D0092522B /* ferry.usdz */,
 				69579BB32745523A0092522B /* PlaneView.swift */,
 				69579BB52745527F0092522B /* PostView.swift */,
 				69579BB1274549E90092522B /* Experience.rcproject */,
@@ -353,8 +353,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				69579BBA2745570F0092522B /* post.usdz in Resources */,
-				69579BBB2745570F0092522B /* ferry.usdz in Resources */,
 				69579BBC2745570F0092522B /* plane.usdz in Resources */,
+				69579BC227456EB20092522B /* ship.usdz in Resources */,
 				69ABC2B12740273A001EC42C /* Assets.xcassets in Resources */,
 				69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */,
 				69AE12262742725A00F0C5D9 /* GoogleService-Info.plist in Resources */,
@@ -581,10 +581,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
-				DEVELOPMENT_TEAM = U6LC9SM2A5;
+				DEVELOPMENT_TEAM = CD42G2X78A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application requires camera access to provide AR experience";
@@ -604,6 +605,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = HKUEEE.Byngo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,10 +618,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
-				DEVELOPMENT_TEAM = U6LC9SM2A5;
+				DEVELOPMENT_TEAM = CD42G2X78A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application requires camera access to provide AR experience";
@@ -639,6 +642,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = HKUEEE.Byngo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
