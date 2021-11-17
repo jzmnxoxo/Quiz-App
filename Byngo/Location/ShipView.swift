@@ -1,34 +1,34 @@
 //
-//  ContentView.swift
-//  bleh
+//  ShipView.swift
+//  Byngo
 //
-//  Created by iosuser on 17/11/2021.
+//  Created by jazzie on 17/11/2021.
 //
 
 import SwiftUI
 import RealityKit
 
-struct LocARView : View {
+struct ShipView : View {
     var body: some View {
         Text("Star Ferry")
-            .font(.title2)
+            .font(.title)
             .fontWeight(.bold)
             .multilineTextAlignment(.leading)
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        return ARShipViewContainer().edgesIgnoringSafeArea(.all)
     }
 }
 
-struct ARViewContainer: UIViewRepresentable {
+struct ARShipViewContainer: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
         
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        let boxAnchor = try! Experience.loadShip()
         boxAnchor.actions.rollingShipID.onAction = {
             entity in
-            boxAnchor.notifications.randomRoll.post()
+            boxAnchor.notifications.randomShip.post()
         }
         
         // Add the box anchor to the scene
@@ -45,7 +45,7 @@ struct ARViewContainer: UIViewRepresentable {
 #if DEBUG
 struct LocARView_Previews : PreviewProvider {
     static var previews: some View {
-        LocARView()
+        ShipView()
     }
 }
 #endif

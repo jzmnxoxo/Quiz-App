@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69579BB2274549E90092522B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 69579BB1274549E90092522B /* Experience.rcproject */; };
+		69579BB42745523A0092522B /* PlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BB32745523A0092522B /* PlaneView.swift */; };
+		69579BB62745527F0092522B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BB52745527F0092522B /* PostView.swift */; };
+		69579BBA2745570F0092522B /* post.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BB72745570A0092522B /* post.usdz */; };
+		69579BBB2745570F0092522B /* ferry.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BB82745570D0092522B /* ferry.usdz */; };
+		69579BBC2745570F0092522B /* plane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BB92745570F0092522B /* plane.usdz */; };
+		69579BBE2745593F0092522B /* LocRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BBD2745593F0092522B /* LocRouter.swift */; };
+		69579BC027455A050092522B /* ThreeDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BBF27455A050092522B /* ThreeDView.swift */; };
 		696E2EB827414F1C006B1461 /* datamodel-category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB127414F1B006B1461 /* datamodel-category.swift */; };
 		696E2EBA27414F1C006B1461 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB327414F1B006B1461 /* CategoryList.swift */; };
 		696E2EBB27414F1C006B1461 /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB427414F1B006B1461 /* CategoryDetail.swift */; };
 		696E2EBC27414F1C006B1461 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB527414F1C006B1461 /* CategoryRow.swift */; };
 		696E2EBE27414F1C006B1461 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E2EB727414F1C006B1461 /* Category.swift */; };
+		696E6B5D27454517002B443C /* ShipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696E6B5C27454517002B443C /* ShipView.swift */; };
 		69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28D2740157F001EC42C /* ByngoApp.swift */; };
 		69ABC2902740157F001EC42C /* CoreDataTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */; };
 		69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69ABC29427401584001EC42C /* Preview Assets.xcassets */; };
-		69ABC29727401584001EC42C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC29627401584001EC42C /* Persistence.swift */; };
 		69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC29827401584001EC42C /* Byngo.xcdatamodeld */; };
 		69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A0274019B4001EC42C /* ContentView.swift */; };
 		69ABC2A9274019B4001EC42C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ABC2A1274019B4001EC42C /* SettingsView.swift */; };
@@ -48,25 +56,29 @@
 		DCDDAC04274244D100F27AC2 /* datamodel-home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC03274244D100F27AC2 /* datamodel-home.swift */; };
 		DCDDAC062742454800F27AC2 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC052742454800F27AC2 /* HomeList.swift */; };
 		DCDDAC08274245F700F27AC2 /* HomeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDAC07274245F700F27AC2 /* HomeDetail.swift */; };
-		E66A25422745015700C2F0D1 /* ferry.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E66A25412745015700C2F0D1 /* ferry.usdz */; };
-		E66A25802745080100C2F0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66A257D2745080100C2F0D1 /* AppDelegate.swift */; };
-		E66A25822745080100C2F0D1 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = E66A257F2745080100C2F0D1 /* Experience.rcproject */; };
-		E66A258627450D9F00C2F0D1 /* LocARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66A258527450D9F00C2F0D1 /* LocARView.swift */; };
 		E6793A1427439AB900C4BC34 /* LocTriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6793A1327439AB900C4BC34 /* LocTriviaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41E5EF830003D0983A29462A /* Pods-Byngo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Byngo.debug.xcconfig"; path = "Target Support Files/Pods-Byngo/Pods-Byngo.debug.xcconfig"; sourceTree = "<group>"; };
+		69579BB1274549E90092522B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		69579BB32745523A0092522B /* PlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneView.swift; sourceTree = "<group>"; };
+		69579BB52745527F0092522B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		69579BB72745570A0092522B /* post.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = post.usdz; sourceTree = "<group>"; };
+		69579BB82745570D0092522B /* ferry.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferry.usdz; sourceTree = "<group>"; };
+		69579BB92745570F0092522B /* plane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = plane.usdz; sourceTree = "<group>"; };
+		69579BBD2745593F0092522B /* LocRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocRouter.swift; sourceTree = "<group>"; };
+		69579BBF27455A050092522B /* ThreeDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDView.swift; sourceTree = "<group>"; };
 		696E2EB127414F1B006B1461 /* datamodel-category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "datamodel-category.swift"; sourceTree = "<group>"; };
 		696E2EB327414F1B006B1461 /* CategoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		696E2EB427414F1B006B1461 /* CategoryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
 		696E2EB527414F1C006B1461 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		696E2EB727414F1C006B1461 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		696E6B5C27454517002B443C /* ShipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipView.swift; sourceTree = "<group>"; };
 		69ABC28A2740157F001EC42C /* Byngo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Byngo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69ABC28D2740157F001EC42C /* ByngoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByngoApp.swift; sourceTree = "<group>"; };
 		69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTemplate.swift; sourceTree = "<group>"; };
 		69ABC29427401584001EC42C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		69ABC29627401584001EC42C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		69ABC29927401584001EC42C /* Byngo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Byngo.xcdatamodel; sourceTree = "<group>"; };
 		69ABC2A0274019B4001EC42C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Byngo/ContentView.swift; sourceTree = SOURCE_ROOT; };
 		69ABC2A1274019B4001EC42C /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Byngo/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
@@ -100,10 +112,6 @@
 		DCDDAC052742454800F27AC2 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		DCDDAC07274245F700F27AC2 /* HomeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetail.swift; sourceTree = "<group>"; };
 		E3F4AFD7672E4877DFE26672 /* Pods-Byngo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Byngo.release.xcconfig"; path = "Target Support Files/Pods-Byngo/Pods-Byngo.release.xcconfig"; sourceTree = "<group>"; };
-		E66A25412745015700C2F0D1 /* ferry.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ferry.usdz; sourceTree = "<group>"; };
-		E66A257D2745080100C2F0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E66A257F2745080100C2F0D1 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
-		E66A258527450D9F00C2F0D1 /* LocARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocARView.swift; path = ../../../bleh/bleh/LocARView.swift; sourceTree = "<group>"; };
 		E6793A1327439AB900C4BC34 /* LocTriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocTriviaView.swift; sourceTree = "<group>"; };
 		E8220E6D234CC78503049D51 /* Pods_Byngo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Byngo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -172,10 +180,6 @@
 			children = (
 				69AE12252742725A00F0C5D9 /* GoogleService-Info.plist */,
 				69ABC2B02740273A001EC42C /* Assets.xcassets */,
-				69ABC29627401584001EC42C /* Persistence.swift */,
-				E66A257D2745080100C2F0D1 /* AppDelegate.swift */,
-				E66A257F2745080100C2F0D1 /* Experience.rcproject */,
-				E66A25412745015700C2F0D1 /* ferry.usdz */,
 				E66A253B2744ED3600C2F0D1 /* Location */,
 				69ABC28F2740157F001EC42C /* CoreDataTemplate.swift */,
 				69ABC29827401584001EC42C /* Byngo.xcdatamodeld */,
@@ -273,9 +277,17 @@
 		E66A253B2744ED3600C2F0D1 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				E66A258527450D9F00C2F0D1 /* LocARView.swift */,
+				696E6B5C27454517002B443C /* ShipView.swift */,
+				69579BBD2745593F0092522B /* LocRouter.swift */,
+				69579BB92745570F0092522B /* plane.usdz */,
+				69579BB72745570A0092522B /* post.usdz */,
+				69579BB82745570D0092522B /* ferry.usdz */,
+				69579BB32745523A0092522B /* PlaneView.swift */,
+				69579BB52745527F0092522B /* PostView.swift */,
+				69579BB1274549E90092522B /* Experience.rcproject */,
 				69F30B3927411DBD003BA6AE /* LocationManager.swift */,
 				E6793A1327439AB900C4BC34 /* LocTriviaView.swift */,
+				69579BBF27455A050092522B /* ThreeDView.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -340,7 +352,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E66A25422745015700C2F0D1 /* ferry.usdz in Resources */,
+				69579BBA2745570F0092522B /* post.usdz in Resources */,
+				69579BBB2745570F0092522B /* ferry.usdz in Resources */,
+				69579BBC2745570F0092522B /* plane.usdz in Resources */,
 				69ABC2B12740273A001EC42C /* Assets.xcassets in Resources */,
 				69ABC29527401584001EC42C /* Preview Assets.xcassets in Resources */,
 				69AE12262742725A00F0C5D9 /* GoogleService-Info.plist in Resources */,
@@ -401,15 +415,16 @@
 				DCDDAC062742454800F27AC2 /* HomeList.swift in Sources */,
 				69ABC2B72740F27B001EC42C /* Defaults.swift in Sources */,
 				696E2EBC27414F1C006B1461 /* CategoryRow.swift in Sources */,
+				69579BB2274549E90092522B /* Experience.rcproject in Sources */,
 				DC5B130D2744090200AB1BCF /* ByCategoryRow.swift in Sources */,
 				69ABC2AA274019B4001EC42C /* HistoryView.swift in Sources */,
 				69E042C0274167990058E9D3 /* OverallView.swift in Sources */,
-				69ABC29727401584001EC42C /* Persistence.swift in Sources */,
-				E66A25822745080100C2F0D1 /* Experience.rcproject in Sources */,
 				69ABC2A8274019B4001EC42C /* ContentView.swift in Sources */,
 				696E2EBB27414F1C006B1461 /* CategoryDetail.swift in Sources */,
 				696E2EB827414F1C006B1461 /* datamodel-category.swift in Sources */,
 				DC5B13072743FD2B00AB1BCF /* ByCategory.swift in Sources */,
+				69579BB42745523A0092522B /* PlaneView.swift in Sources */,
+				69579BBE2745593F0092522B /* LocRouter.swift in Sources */,
 				DCDDABFD2742443F00F27AC2 /* HomeRow.swift in Sources */,
 				69ABC29A27401584001EC42C /* Byngo.xcdatamodeld in Sources */,
 				DC5B131427440B6C00AB1BCF /* ByCategoryDetail.swift in Sources */,
@@ -418,12 +433,10 @@
 				69E042C6274169D10058E9D3 /* StatRouter.swift in Sources */,
 				69F30B3A27411DBE003BA6AE /* LocationManager.swift in Sources */,
 				DC5B1311274409D300AB1BCF /* ByCategoryList.swift in Sources */,
-				E66A25802745080100C2F0D1 /* AppDelegate.swift in Sources */,
 				DC5B12F62743911E00AB1BCF /* ImagePicker.swift in Sources */,
 				69E042C1274167990058E9D3 /* StatsView.swift in Sources */,
 				DC5B12F827439C0000AB1BCF /* ImageChangeView.swift in Sources */,
 				DC5B13052743FC4200AB1BCF /* tempHistory.swift in Sources */,
-				E66A258627450D9F00C2F0D1 /* LocARView.swift in Sources */,
 				69ABC2AD274019B4001EC42C /* UserView.swift in Sources */,
 				69ABC2AF274019B4001EC42C /* HomeView.swift in Sources */,
 				69ABC28E2740157F001EC42C /* ByngoApp.swift in Sources */,
@@ -432,10 +445,13 @@
 				69AE12242742506E00F0C5D9 /* AuthView.swift in Sources */,
 				696E2EBA27414F1C006B1461 /* CategoryList.swift in Sources */,
 				DCDDAC00274244A400F27AC2 /* Home.swift in Sources */,
+				69579BC027455A050092522B /* ThreeDView.swift in Sources */,
 				696E2EBE27414F1C006B1461 /* Category.swift in Sources */,
 				E6793A1427439AB900C4BC34 /* LocTriviaView.swift in Sources */,
 				DCDDAC04274244D100F27AC2 /* datamodel-home.swift in Sources */,
 				DC5B130F2744096B00AB1BCF /* datamodel-byCategory.swift in Sources */,
+				696E6B5D27454517002B443C /* ShipView.swift in Sources */,
+				69579BB62745527F0092522B /* PostView.swift in Sources */,
 				DCDDAC08274245F700F27AC2 /* HomeDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
-				DEVELOPMENT_TEAM = 3TH4VNUEL9;
+				DEVELOPMENT_TEAM = U6LC9SM2A5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application requires camera access to provide AR experience";
@@ -577,6 +593,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -602,7 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Byngo/Preview Content\"";
-				DEVELOPMENT_TEAM = 3TH4VNUEL9;
+				DEVELOPMENT_TEAM = U6LC9SM2A5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application requires camera access to provide AR experience";
@@ -611,6 +628,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

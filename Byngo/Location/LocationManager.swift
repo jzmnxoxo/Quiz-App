@@ -8,15 +8,22 @@
 import CoreLocation
 import Foundation
 import MapKit
+import SwiftUI
 
 
+class Choice:ObservableObject{
+    @Published var choice: Int = 0
+}
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+    @ObservedObject var choice = Choice()
     
     @Published var showAlert: Bool = false
     @Published var tmp1: Bool = true
     @Published var tmp2: Bool = true
-    @Published var venueLocation = CLLocation(latitude: 22.283, longitude: 114.1371)
+    @State var planeLocation = CLLocation(latitude: 22.308, longitude: 113.9185)
+    @State var postLocation = CLLocation(latitude: 22.2836, longitude: 114.1596)
+    @State var shipLocation = CLLocation(latitude: 22.2938, longitude: 114.1687)
     private let locationManager=CLLocationManager()
     @Published var userLocation:CLLocation = CLLocation()
     
@@ -40,12 +47,24 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func checkLocation(){
-        let radius: Double = 8000
-        let distance = userLocation.distance(from: venueLocation)
+        let radius: Double = 1000
+        let planeDistance = userLocation.distance(from: planeLocation)
+        let postDistance = userLocation.distance(from: postLocation)
+        let shipDistance = userLocation.distance(from: shipLocation)
         
-        if (distance < radius ){
+        if (planeDistance < radius ){
             tmp1 = true
+            choice.choice = 1
+        } else if (postDistance<radius){
+            tmp1 = true
+            choice.choice = 2
+        } else if (shipDistance<radius){
+            tmp1 = true
+            choice.choice = 0
+        }else{
+            tmp1 = false
         }
+        
         if(tmp1 == true){
             if (tmp2 == true){
                 showAlert=true
@@ -54,6 +73,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 showAlert=false
             }
             
+        }else{
+            showAlert=false
         }
     }
 }

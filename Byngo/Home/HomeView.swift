@@ -46,7 +46,7 @@ struct HomeView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
         }
-        NavigationLink(destination: LocTriviaView(), isActive: $showLocTrivia) {
+        NavigationLink(destination: LocTriviaView(locRouter: LocRouter()), isActive: $showLocTrivia) {
             EmptyView()
         }
         .alert(isPresented: $locationManager.showAlert) {
