@@ -12,8 +12,6 @@ class ModelDataCat: ObservableObject {
     @Published var categories:[Category] = []
     
     init() {
-        let df = DateFormatter()
-        df.dateFormat="d-MMM-yyyy"
 
         categories.append(Category(id:0, title:"Biology"))
         categories.append(Category(id:1, title:"Programming"))

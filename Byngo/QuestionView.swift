@@ -1,26 +1,35 @@
+////
+////  QuestionView.swift
+////  Byngo
+////
+////  Created by felix on 16/11/2021.
+////
 //
-//  QuestionView.swift
-//  Byngo
+//import SwiftUI
 //
-//  Created by felix on 16/11/2021.
 //
-
-import SwiftUI
-
-
-
-struct QuestionView: View {
-    
-    @EnvironmentObject var categoryData: ModelDataCat
-    @EnvironmentObject var homeData: ModelDataHome
-    
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct QuestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestionView()
-    }
-}
+//
+//struct QuestionView: View {
+//
+//    var question: Question
+//
+//
+//    var body: some View {
+//        HStack {
+//            Text(question.category)
+//                .font(.headline)
+//        }
+//    }
+//}
+//
+//struct QuestionView_Previews: PreviewProvider {
+//
+//    static let questionData = ModelDataQuestion()
+//
+//    static var previews: some View {
+//        Group {
+//            QuestionView(question: questionData.questions[0])
+//            QuestionView(question: questionData.questions[1])
+//        }
+//    }
+//}

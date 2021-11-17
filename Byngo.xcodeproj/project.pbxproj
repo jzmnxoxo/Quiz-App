@@ -89,6 +89,7 @@
 		DC5B130E2744096B00AB1BCF /* datamodel-byCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "datamodel-byCategory.swift"; sourceTree = "<group>"; };
 		DC5B1310274409D300AB1BCF /* ByCategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCategoryList.swift; sourceTree = "<group>"; };
 		DC5B131327440B6C00AB1BCF /* ByCategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCategoryDetail.swift; sourceTree = "<group>"; };
+		DC5B13152744CAC000AB1BCF /* datamodel-question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "datamodel-question.swift"; sourceTree = "<group>"; };
 		DCDDABFC2742443F00F27AC2 /* HomeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRow.swift; sourceTree = "<group>"; };
 		DCDDABFF274244A400F27AC2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DCDDAC03274244D100F27AC2 /* datamodel-home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "datamodel-home.swift"; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 				69ABC2A0274019B4001EC42C /* ContentView.swift */,
 				DC5B130A2744024D00AB1BCF /* QuestionView.swift */,
 				DC5B13002743ABBB00AB1BCF /* Question.swift */,
+				DC5B13152744CAC000AB1BCF /* datamodel-question.swift */,
 				696E2EBF274150C6006B1461 /* Category */,
 				69E042C4274167AA0058E9D3 /* User */,
 				DC5B12E727438A6B00AB1BCF /* History */,

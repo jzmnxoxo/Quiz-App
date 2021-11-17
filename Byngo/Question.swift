@@ -11,7 +11,13 @@ import SwiftUI
 
 struct Question: Identifiable {
     var id: Int
-    var category: String
+    var category: CategoryQuestion
     
 }
 
+struct CategoryQuestion: Identifiable {
+    var id: Int
+    var question: String
+    var choice = Array<Any>().self
+    
+}
