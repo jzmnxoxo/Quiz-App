@@ -13,11 +13,11 @@ class ModelDataByCat: ObservableObject {
     
     init() {
 
-        byCategories.append(ByCategory(id:0, title:"Biology"))
-        byCategories.append(ByCategory(id:1, title:"Programming"))
-        byCategories.append(ByCategory(id:2, title:"Math"))
-        byCategories.append(ByCategory(id:3, title:"Chinese"))
-        byCategories.append(ByCategory(id:4, title:"English"))
+        byCategories.append(ByCategory(id:0, title:"Biology", percent:87))
+        byCategories.append(ByCategory(id:1, title:"Programming", percent:68))
+        byCategories.append(ByCategory(id:2, title:"Math", percent:42))
+        byCategories.append(ByCategory(id:3, title:"Chinese", percent:73))
+        byCategories.append(ByCategory(id:4, title:"English", percent:98))
 
     }
 }

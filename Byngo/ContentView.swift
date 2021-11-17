@@ -24,7 +24,7 @@ struct ContentView: View {
                 case .category:
                     CategoryList()
                 case .history:
-                    HistoryView()
+                    HistoryView(histRouter: HistRouter())
 //                    tempHistory()
                 case .settings:
                     SettingsView()

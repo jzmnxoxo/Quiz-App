@@ -14,6 +14,9 @@ struct ByCategoryRow: View {
         HStack {
             Text(byCategory.title)
                 .font(.headline)
+            Spacer()
+            Text(String(byCategory.percent)+"%")
+                .font(.headline)
 
         }
     }

@@ -10,5 +10,6 @@ import Foundation
 struct ByCategory: Identifiable {
     var id: Int
     var title: String
+    var percent:Int
     
 }
