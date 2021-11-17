@@ -15,14 +15,15 @@ struct HomeView: View {
     @StateObject private var homeData = ModelDataHome()
     
     @State var showLocTrivia: Bool = false
+
     //var timer:Timer?
     
+    
+    
     var body: some View {
-//        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(locationManager.checkLocation), userInfo: nil, repeats: true)
-        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+
+        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             locationManager.checkLocation()}
-                    
-        
         
         GeometryReader{ geometry in
             VStack{
@@ -51,11 +52,11 @@ struct HomeView: View {
         .alert(isPresented: $locationManager.showAlert) {
             Alert(title: Text("Surprise!"),
                   message: Text("You reached a LocaTrivia Spot! Wanna know more about this place?"),
-                  primaryButton: .default(Text("Sure!"), action: {self.showLocTrivia = true}),
-                  secondaryButton: .cancel()
+                  primaryButton: .default(Text("Sure!"), action: {self.showLocTrivia = true;locationManager.tmp2=false}),
+                  secondaryButton: .cancel(Text("Nah"),action: {locationManager.tmp2=false})
             )
         }
-        .onDisappear(perform: timer.invalidate)
+        .onAppear(perform: timer.invalidate)
     }
        
 }
