@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct HomeList: View {
-    
+
     @StateObject private var homeData = ModelDataHome()
+
     
     var body: some View {
         NavigationView {

@@ -11,7 +11,6 @@ class ModelDataHome: ObservableObject {
     
     @Published var homes:[Home] = []
     
-    init() {
 
         homes.append(Home(id:0, title:"Daily Mission", desc:""))
         homes.append(Home(id:1, title:"Swift Basic", desc:""))

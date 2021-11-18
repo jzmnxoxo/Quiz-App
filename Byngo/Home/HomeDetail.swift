@@ -8,12 +8,14 @@
 import SwiftUI
 import MapKit
 
+
 struct HomeDetail: View {
     
     @EnvironmentObject var homeData: ModelDataHome
     @Environment(\.presentationMode) var presentationMode
     @State var home: Home
     
+
     @State var selected: Int = 0
     @State private var isSelected = false
     
@@ -292,4 +294,3 @@ struct HomeDetail_Previews: PreviewProvider {
             .environmentObject(ModelDataHome())
     }
 }
-
