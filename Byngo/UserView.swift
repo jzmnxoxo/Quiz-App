@@ -9,32 +9,34 @@ import SwiftUI
 import Combine
 
 struct UserView: View {
-
+    
     @ObservedObject var userSettings = UserSettings()
+    @EnvironmentObject var viewModel: AppViewModel
     @State private var isHidden: Bool = true
-
+    
+    @State private var email: String = ""
+    
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
                 Spacer()
-                HStack {
-                    Spacer()
-                    Image("avatar3")
-                        .resizable()
-                        .frame(width: 120, height: 120)
-                        .shadow(radius: 5)
-                    Spacer()
-                }
+                ImageChangeView()
+                
                 Form {
                     Section(header: Text("Username")) {
                         TextField("Royal Educated Octopus", text: $userSettings.username)
-
-                        ZStack(alignment: .trailing) {
+                    }
+    //                    Section(header: Text("Email")) {
+    //                        TextField("email", text: $email)
+    //                    }
+                    Section(header: Text("Password")) {
+                        HStack {
                             if isHidden {
-                                SecureField("Password", text: $userSettings.password)
+                                Text("**********")
                             } else {
-                                TextField("Password", text: $userSettings.password)
+                                Text(userSettings.password)
                             }
+                            Spacer()
                             Button(action: {
                                 isHidden.toggle()
                             }) {
@@ -43,22 +45,32 @@ struct UserView: View {
                             }
                         }
                     }
-                    //                        TextField("Password", text: $userSettings.password)
-                    NavigationLink(destination: StatsView(statRouter: StatRouter())){
-                        Text("Statistics")
+                    Section {
+                        NavigationLink(destination: StatsView(statRouter: StatRouter())) {
+                            Text("Statistics")
+                        }
                     }
-                    
+                    Button(action: {
+                        viewModel.logout()
+                    }, label: {
+                        Text("Log out ")
+                            .multilineTextAlignment(.center)
+      
+                    })
                 }
+     
+                
             }
-            .navigationTitle("Account")
-
-        }
+//        }
+        .navigationTitle("Account")
         
-
     }
-
-
+    
+    
 }
+
+
+
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {

@@ -18,53 +18,63 @@ class UserSettings: ObservableObject {
         }
     }
     
+    @Published var email: String {
+        didSet {
+            UserDefaults.standard.set(email, forKey: "email")
+        }
+    }
+    
     @Published var password: String {
         didSet {
             UserDefaults.standard.set(password, forKey: "password")
         }
     }
     
-//    @Published var id : Int = UserDefaults.standard.integer(forKey: "id") ?? UserSettings.ids[0]{
-//        didSet {
-//            UserDefaults.standard.set(id, forKey: "id")
-//        }
-//    }
-    
     @Published var music : Bool {
-        didSet{
+        didSet {
             UserDefaults.standard.set(music, forKey: "music")
         }
     }
     
     @Published var soundEffects : Bool {
-        didSet{
+        didSet {
             UserDefaults.standard.set(soundEffects, forKey: "soundEffects")
         }
     }
     
-    @Published var language: String = UserDefaults.standard.string(forKey: "language") ?? UserSettings.langs[0]{
-        didSet{
-            UserDefaults.standard.set(self.language,forKey: "language")
+    @Published var notif : Bool {
+        didSet {
+            UserDefaults.standard.set(notif, forKey: "notif")
         }
     }
     
-    @Published var region: String = UserDefaults.standard.string(forKey: "region") ?? UserSettings.regions[0]{
-        didSet{
-            UserDefaults.standard.set(self.region,forKey: "region")
+    
+    @Published var language: String = UserDefaults.standard.string(forKey: "language") ?? UserSettings.langs[0] {
+        didSet {
+            UserDefaults.standard.set(self.language, forKey: "language")
+        }
+    }
+    
+    @Published var region: String = UserDefaults.standard.string(forKey: "region") ?? UserSettings.regions[0] {
+        didSet {
+            UserDefaults.standard.set(self.region, forKey: "region")
         }
     }
     
     static var langs = ["English", "Chinese", "Spanish","Japanese"]
-    static var ids = [123456, 543523, 984752, 234213]
     static var regions = ["Hong Kong", "Taiwan", "United States", "Japan"]
     
-    init(){
-        self.username = UserDefaults.standard.object(forKey: "username") as? String ?? "User"
+    init() {
         self.music = UserDefaults.standard.object(forKey: "music") as? Bool ?? true
         self.soundEffects = UserDefaults.standard.object(forKey: "soundEffects") as? Bool ?? true
-        self.password = UserDefaults.standard.object(forKey: "password") as? String ?? ""
+        self.notif = UserDefaults.standard.object(forKey: "notif") as? Bool ?? false
+        
         self.language = UserDefaults.standard.object(forKey: "language") as? String ?? "English"
         self.region = UserDefaults.standard.object(forKey: "region") as? String ?? "Hong Kong"
+        
+        self.username = UserDefaults.standard.object(forKey: "username") as? String ?? "User"
+        self.email = UserDefaults.standard.object(forKey: "password") as? String ?? ""
+        self.password = UserDefaults.standard.object(forKey: "password") as? String ?? ""
         
     }
     

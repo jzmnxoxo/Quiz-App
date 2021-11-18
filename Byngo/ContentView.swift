@@ -14,9 +14,9 @@ struct ContentView: View {
     
     var body: some View {
         GeometryReader{ geometry in
-            VStack{
+            VStack {
                 Spacer()
-                switch viewRouter.currentPage{
+                switch viewRouter.currentPage {
                 case .home:
                     HomeView()
                 case .user:
@@ -24,16 +24,17 @@ struct ContentView: View {
                 case .category:
                     CategoryList()
                 case .history:
-                    Text("History")
+                    HistoryView(histRouter: HistRouter())
+//                    tempHistory()
                 case .settings:
                     SettingsView()
                 }
                 Spacer()
-                HStack{
+                HStack {
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .user, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "person.crop.circle", tabName: "Account")
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .category, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "books.vertical", tabName: "Categories")
                     
-                    ZStack{
+                    ZStack {
                         Circle()
                             .foregroundColor(.white)
                             .frame(width: geometry.size.width/7, height: geometry.size.width/7)
@@ -50,7 +51,7 @@ struct ContentView: View {
                     .offset(y: -geometry.size.height/8/3)
 
                     TabBarIcon(viewRouter: viewRouter, assignedPage: .history, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "clock.arrow.circlepath", tabName: "History")
-                    TabBarIcon(viewRouter: viewRouter, assignedPage: .settings,width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "gearshape", tabName: "Settings")
+                    TabBarIcon(viewRouter: viewRouter, assignedPage: .settings, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "gearshape", tabName: "Settings")
                     
 
                 }
@@ -72,7 +73,7 @@ struct TabBarIcon: View {
     let systemIconName, tabName: String
     
     var body: some View {
-        VStack{
+        VStack {
             Image(systemName: systemIconName)
                 .resizable()
                 .aspectRatio( contentMode: .fit)
@@ -92,8 +93,12 @@ struct TabBarIcon: View {
 
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static var userSettings = UserSettings()
+    
     static var previews: some View {
         ContentView(viewRouter: ViewRouter())
+            .environmentObject(ModelDataByCat())
     }
 }
 

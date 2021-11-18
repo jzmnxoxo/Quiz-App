@@ -5,19 +5,20 @@ struct StatsView: View {
     @StateObject var statRouter:StatRouter
     var body: some View {
             GeometryReader{ geometry in
-                VStack{
-                    HStack{
+                VStack {
+                    HStack {
                         StatIcon(statRouter: statRouter, assignedStat: .overall, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "globe.americas", tabName: "Overall")
                         StatIcon(statRouter: statRouter, assignedStat: .category, width: geometry.size.width/5, height: geometry.size.height/28, systemIconName: "books.vertical", tabName: "By Category")
                     }
                     .frame(width: geometry.size.width, height: geometry.size.height/8)
                     .background(Color.clear.shadow(radius: 2))
                     
-                    switch statRouter.currentStat{
+                    switch statRouter.currentStat {
                     case .overall:
                         OverallView()
                     case .category:
-                        ByCategoryView()
+                        ByCategoryList()
+                            .environmentObject(ModelDataByCat())
                     }
                     Spacer()
                 }
@@ -86,5 +87,6 @@ struct StatIcon: View {
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {
         StatsView(statRouter: StatRouter())
+            .environmentObject(ModelDataByCat())
     }
 }

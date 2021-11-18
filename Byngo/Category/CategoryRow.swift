@@ -15,10 +15,6 @@ struct CategoryRow: View {
             Text(category.title)
                 .font(.headline)
             
-            Text(category.desc)
-                .font(.body)
-                .foregroundColor(Color.gray)
-            
             
             
         }
@@ -26,7 +22,7 @@ struct CategoryRow: View {
 }
 
 struct CategoryRow_Previews: PreviewProvider {
-    static let categoryData = ModelData()
+    static let categoryData = ModelDataCat()
     static var previews: some View {
         Group {
             CategoryRow(category: categoryData.categories[0])

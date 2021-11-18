@@ -9,17 +9,19 @@ import SwiftUI
 
 struct CategoryList: View {
     
-    @EnvironmentObject var categoryData: ModelData
+    @EnvironmentObject var categoryData: ModelDataCat
     
     var body: some View {
-        NavigationView {
+        VStack {
             List(categoryData.categories) {category in
                 NavigationLink(destination: CategoryDetail(category: category)) {
                     CategoryRow(category: category)
                 }
             }
-            .navigationTitle("Category")
+            
+            .navigationBarTitle("Category")
         }
+
     }
 }
 
@@ -27,6 +29,7 @@ struct CategoryList: View {
 struct CategoryList_Previews: PreviewProvider {
     static var previews: some View {
         CategoryList()
-            .environmentObject(ModelData())
+            .environmentObject(ModelDataCat())
     }
 }
+    
