@@ -11,6 +11,7 @@
 		69402FFD27459C6D00F68A0D /* HistRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69402FFC27459C6D00F68A0D /* HistRouter.swift */; };
 		69402FFF27459CDF00F68A0D /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69402FFE27459CDF00F68A0D /* CommentView.swift */; };
 		6940300127459CEC00F68A0D /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940300027459CEC00F68A0D /* SavedView.swift */; };
+		694030032746062F00F68A0D /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694030022746062E00F68A0D /* AnswerView.swift */; };
 		69579BB42745523A0092522B /* PlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BB32745523A0092522B /* PlaneView.swift */; };
 		69579BB62745527F0092522B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69579BB52745527F0092522B /* PostView.swift */; };
 		69579BBA2745570F0092522B /* post.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 69579BB72745570A0092522B /* post.usdz */; };
@@ -69,6 +70,7 @@
 		69402FFC27459C6D00F68A0D /* HistRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistRouter.swift; sourceTree = "<group>"; };
 		69402FFE27459CDF00F68A0D /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		6940300027459CEC00F68A0D /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		694030022746062E00F68A0D /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		69579BB32745523A0092522B /* PlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneView.swift; sourceTree = "<group>"; };
 		69579BB52745527F0092522B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		69579BB72745570A0092522B /* post.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = post.usdz; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				69AE12232742506E00F0C5D9 /* AuthView.swift */,
 				69ABC2A0274019B4001EC42C /* ContentView.swift */,
 				DC5B130A2744024D00AB1BCF /* QuestionView.swift */,
+				694030022746062E00F68A0D /* AnswerView.swift */,
 				696E2EBF274150C6006B1461 /* Category */,
 				69E042C4274167AA0058E9D3 /* User */,
 				DC5B12E727438A6B00AB1BCF /* History */,
@@ -458,6 +461,7 @@
 				696E2EBA27414F1C006B1461 /* CategoryList.swift in Sources */,
 				DCDDAC00274244A400F27AC2 /* Home.swift in Sources */,
 				69579BC027455A050092522B /* ThreeDView.swift in Sources */,
+				694030032746062F00F68A0D /* AnswerView.swift in Sources */,
 				696E2EBE27414F1C006B1461 /* Category.swift in Sources */,
 				DCD01E0627458C4F00873450 /* CatConfirm.swift in Sources */,
 				E6793A1427439AB900C4BC34 /* LocTriviaView.swift in Sources */,

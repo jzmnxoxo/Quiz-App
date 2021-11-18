@@ -18,6 +18,7 @@ struct PersistenceController {
             newItem.id = Int16(i)
             newItem.question = String(i)
             newItem.subject = String(i)
+            newItem.answer = String(i)
         }
         do {
             try viewContext.save()
